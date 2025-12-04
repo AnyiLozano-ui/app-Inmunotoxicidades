@@ -9,8 +9,8 @@ export default function Menu() {
 		<div className="min-h-screen bg-[#eee7e7] flex justify-center p-4">
 			<div className="w-full max-w-xs bg-white  overflow-hidden">
 				{/* HEADER */}
-				<div className="bg-[#fff] px-[25px] rounded-b-[24px] py-[10px]">
-					<div className="flex items-center justify-between">
+				<div className="bg-[#fff] rounded-b-[24px] py-[10px] fixed top-[0px] w-full">
+					<div className="flex items-center justify-between px-[25px]">
 						{/* Título */}
 						<h1 className="flex items-center">
 							<img
