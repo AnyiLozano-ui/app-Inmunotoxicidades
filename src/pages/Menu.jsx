@@ -20,7 +20,7 @@ export default function Menu() {
 							/>
 						</h1>
 						{/* Iconos */}
-						<div className="flex space-x-3">
+						<div className="flex space-x-3 gap-[3px]">
 							<Link to="/">
 								<img
 									src={homeIcon}
