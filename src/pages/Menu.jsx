@@ -1,53 +1,121 @@
+import Footer from '../components/common/Footer/Footer'
+import Header from '../components/common/Header/Header'
 import { Link } from 'react-router-dom'
-import homeIcon from '/Images/home.png'
-import infoIcon from '/Images/intruciones.png'
-import menuIcon from '/Images/legales.png'
-import logoIrAE from '/Images/logo.png'
 
 export default function Menu() {
 	return (
-		<div className="min-h-screen bg-[#eee7e7] flex justify-center p-4">
-			<div className="w-full max-w-xs bg-white  overflow-hidden">
-				{/* HEADER */}
-				<div className="bg-[#fff] rounded-b-[24px] py-[10px] fixed top-[0px] w-full">
-					<div className="flex items-center justify-between px-[25px]">
-						{/* Título */}
-						<h1 className="flex items-center">
+		<div className="min-h-screen bg-[#f3eeee] flex flex-col items-center p-4">
+			<div className="w-full max-w-xs bg-white overflow-hidden">
+				<Header />
+				<div className="max-w-[80%] mt-[90px] mx-auto relative">
+					<div className="flex px-[20px] bg-[#ebe6e6] items-center gap-[20px] rounded-b-[20px]">
+						<div>
 							<img
-								src={logoIrAE}
-								alt="irAE Control-Expert"
-								className="w-[190px] object-contain"
+								src="/Images/chulito.png"
+								className="w-[50px] h-[50px]"
 							/>
-						</h1>
-						{/* Iconos */}
-						<div className="flex space-x-3 gap-[3px]">
-							<Link to="/">
+						</div>
+						<p className="text-[#595454] font-[400]">
+							Si ya conoce cómo funciona la herramienta, elija una
+							de las siguientes opciones:
+						</p>
+					</div>
+					<Link to="/valoration">
+						<div className="relative flex gap-[10px] mt-[20px]">
+							<div className="flex items-center">
 								<img
-									src={homeIcon}
-									alt="Home"
-									className="w-[34px] h-[34px] cursor-pointer hover:scale-110 transition"
+									src="/Images/mas.png"
+									className="w-[30px] h-[30px]"
 								/>
-							</Link>
-
-							<Link to="/info">
+							</div>
+							<div className="relative w-full">
+								<p className="text-[#595454] text-[24px] font-[700] mb-[15px]">
+									Comenzar valoración
+								</p>
 								<img
-									src={infoIcon}
-									alt="Información"
-									className="w-[34px] h-[34px] cursor-pointer hover:scale-110 transition"
+									src="/Images/linea.png"
+									className="bottom-[0px] absolute left-[0px] w-full"
 								/>
-							</Link>
-
-							<Link to="/menu">
+							</div>
+						</div>
+					</Link>
+					<div className="relative flex gap-[10px] mt-[20px]">
+						<div className="flex items-center">
+							<img
+								src="/Images/mas.png"
+								className="w-[30px] h-[30px]"
+							/>
+						</div>
+						<div className="relative w-full">
+							<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
+								Acceder a
+							</p>
+							<p className="text-[#595454] text-[24px] font-[700] mt-[0px] mb-[15px]">
+								la calculadora
+							</p>
+							<img
+								src="/Images/linea.png"
+								className="bottom-[0px] absolute left-[0px] w-full"
+							/>
+						</div>
+					</div>
+					<Link to="/resources">
+						<div className="relative flex gap-[10px] mt-[20px]">
+							<div className="flex items-center">
 								<img
-									src={menuIcon}
-									alt="Menú"
-									className="w-[34px] h-[34px] cursor-pointer hover:scale-110 transition"
+									src="/Images/mas.png"
+									className="w-[30px] h-[30px]"
 								/>
-							</Link>
+							</div>
+							<div className="relative w-full">
+								<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
+									Acceder a recursos
+								</p>
+								<p className="text-[#595454] text-[24px] font-[700] mt-[0px] mb-[15px]">
+									de apoyo
+								</p>
+								<img
+									src="/Images/linea.png"
+									className="bottom-[0px] absolute left-[0px] w-full"
+								/>
+							</div>
+						</div>
+					</Link>
+					<div className="flex px-[20px] mt-[40px] bg-[#ebe6e6] items-center gap-[20px] rounded-[20px]">
+						<div>
+							<img
+								src="/Images/add.png"
+								className="w-[50px] h-[50px]"
+							/>
+						</div>
+						<p className="text-[#595454] font-[400]">
+							Si es su primera vez o no recuerda cómo usar la
+							herramienta, acceda primero a la guía de uso.
+						</p>
+					</div>
+					<div className="relative flex gap-[10px] mt-[20px] mb-[50px]">
+						<div className="flex items-center">
+							<img
+								src="/Images/mas.png"
+								className="w-[30px] h-[30px]"
+							/>
+						</div>
+						<div className="relative w-full">
+							<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
+								Conozca cómo funciona
+							</p>
+							<p className="text-[#595454] text-[24px] font-[700] mt-[0px] mb-[15px]">
+								esta herramienta
+							</p>
+							<img
+								src="/Images/linea.png"
+								className="bottom-[0px] absolute left-[0px] w-full"
+							/>
 						</div>
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	)
 }

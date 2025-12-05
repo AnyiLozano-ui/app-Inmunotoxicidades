@@ -10,6 +10,27 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'BMSHumanity';
+	src: url('/fonts/BMSHUMANITY-BOLD.TTF') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BMSHumanity';
+	src: url('/fonts/BMSHUMANITY-EXTRABOLD.TTF') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BMSHumanity';
+	src: url('/fonts/BMSHUMANITY-LIGHT.OTF') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
 /* Quitar margen por defecto del body */
 html,
 body,
@@ -21,4 +42,25 @@ body {
 	margin: 0;
 	font-family: 'BMSHumanity', system-ui, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', sans-serif;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sickness-select__dropdown-indicator {
+	svg {
+		fill: #be2bbb;
+		stroke: #be2bbb;
+	}
+}
+
+ul {
+	padding-inline-start: 10px;
+}
+
+li::marker {
+	color: #be2bbb;
 }
