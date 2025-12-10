@@ -17,7 +17,10 @@ const Sickness = () => {
 	/* eslint-disable react-hooks/set-state-in-effect */
 	useEffect(() => {
 		if (valueSickness) setType('')
-	},[valueSickness])
+		setPageTest(null)
+		setStep(1)
+		setPageManage(null)
+	}, [valueSickness])
 
 	return (
 		<div className="min-h-screen bg-[#f3eeee] flex flex-col items-center p-4">
@@ -27,7 +30,10 @@ const Sickness = () => {
 					<div>
 						<img
 							src={data.alert_image}
-							style={{ width:data.width ? data.width : 143, height:data.height ? data.height : 80 }}
+							style={{
+								width: data.width ? data.width : 143,
+								height: data.height ? data.height : 80,
+							}}
 						/>
 					</div>
 					<div className="absolute left-[120px] top-[60px]">
@@ -109,11 +115,21 @@ const Sickness = () => {
 									su paciente:{' '}
 								</p>
 								<Select
-									options={data[valueSickness.value].evaluation_select ?? [
-										{ value: '1', label: '1' },
-										{ value: '2', label: '2' },
-										{ value: '≥3', label: '≥3' },
-									]}
+									options={
+										data[valueSickness.value] &&
+										data[valueSickness.value]
+											.evaluation_select
+											? data[valueSickness.value]
+													.evaluation_select
+											: [
+													{ value: '1', label: '1' },
+													{ value: '2', label: '2' },
+													{
+														value: '≥3',
+														label: '≥3',
+													},
+											  ]
+									}
 									value={type}
 									onChange={(e) => {
 										setType(e)
@@ -140,7 +156,12 @@ const Sickness = () => {
 											borderColor: '#be2bbb !important',
 											borderWidth: 1,
 											borderRadius: 0,
-											width: data[valueSickness.value].width ?? 80
+											width:
+												data[valueSickness.value] &&
+												data[valueSickness.value].width
+													? data[valueSickness.value]
+															.width
+													: 80,
 										}),
 										option: (base, state) => ({
 											...base,
@@ -175,16 +196,25 @@ const Sickness = () => {
 										<p
 											className="text-[11px] px-[20px] pt-[5px] text-[#595454]"
 											dangerouslySetInnerHTML={{
-												__html: data[
-													valueSickness.value
-												].test[`step-${type.value}`][
-													pageTest
-												],
+												__html:
+													valueSickness &&
+													data[valueSickness.value]
+														.test[
+														`step-${type.value}`
+													]
+														? data[
+																valueSickness
+																	.value
+														  ].test[
+																`step-${type.value}`
+														  ][pageTest]
+														: '',
 											}}></p>
 									)}
-									{data[valueSickness.value].test[
-										`step-${type.value}`
-									] &&
+									{data[valueSickness.value] &&
+										data[valueSickness.value].test[
+											`step-${type.value}`
+										] &&
 										data[valueSickness.value].test[
 											`step-${type.value}`
 										].length > 1 &&
@@ -208,9 +238,10 @@ const Sickness = () => {
 												/>
 											</div>
 										)}
-									{data[valueSickness.value].test[
-										`step-${type.value}`
-									] &&
+									{data[valueSickness.value] &&
+										data[valueSickness.value].test[
+											`step-${type.value}`
+										] &&
 										data[valueSickness.value].test[
 											`step-${type.value}`
 										].length > 1 &&
@@ -240,11 +271,19 @@ const Sickness = () => {
 												/>
 											</div>
 										)}
-									<div
-										onClick={() => setStep(2)}
-										className="absolute cursor-pointer -bottom-[10px] w-[150px] h-[32px] bg-[#be2bbb] rounded-[10px] shadow-none border-[none] flex justify-center items-center uppercase text-[#fff] text-[20px]">
-										Continuar
-									</div>
+									{
+										data[valueSickness.value] && data[valueSickness.value].test[
+												`step-${type.value}`
+											] && pageTest + 1 ===
+											data[valueSickness.value].test[
+												`step-${type.value}`
+											].length && (
+											<div
+												onClick={() => setStep(2)}
+												className="absolute cursor-pointer -bottom-[10px] w-[150px] h-[32px] bg-[#be2bbb] rounded-[10px] shadow-none border-[none] flex justify-center items-center uppercase text-[#fff] text-[20px]">
+												Continuar
+											</div>
+										)}
 								</div>
 							</div>
 						</>
@@ -290,7 +329,10 @@ const Sickness = () => {
 									)}
 									{data[valueSickness.value].manage[
 										`step-${type.value}`
-									].length > 1 &&
+									] &&
+										data[valueSickness.value].manage[
+											`step-${type.value}`
+										].length > 1 &&
 										pageManage <
 											data[valueSickness.value].manage[
 												`step-${type.value}`
@@ -340,9 +382,14 @@ const Sickness = () => {
 												/>
 											</div>
 										)}
-									<div className="absolute cursor-pointer -bottom-[10px] w-[150px] h-[32px] bg-[#be2bbb] rounded-[10px] shadow-none border-[none] flex justify-center items-center uppercase text-[#fff] text-[20px]">
-										Continuar
-									</div>
+									{pageManage + 1 ===
+										data[valueSickness.value].manage[
+											`step-${type.value}`
+										].length && (
+										<div className="absolute cursor-pointer -bottom-[10px] w-[150px] h-[32px] bg-[#be2bbb] rounded-[10px] shadow-none border-[none] flex justify-center items-center uppercase text-[#fff] text-[20px]">
+											Continuar
+										</div>
+									)}
 								</div>
 							</div>
 						</>
@@ -367,7 +414,10 @@ const Sickness = () => {
 						</div>
 					</div>
 				</div>
-                <p className='text-[10px] text-center text-[#595454] font-[400]'>irAE: evento adverso inmunomediado, por sus siglas en inglés.</p>
+				<p className="text-[10px] text-center text-[#595454] font-[400]">
+					irAE: evento adverso inmunomediado, por sus siglas en
+					inglés.
+				</p>
 			</div>
 			<Footer />
 		</div>
