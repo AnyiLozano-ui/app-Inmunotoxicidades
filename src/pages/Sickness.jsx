@@ -22,7 +22,7 @@ const Sickness = () => {
 					<div>
 						<img
 							src={data.alert_image}
-							className="w-[143px] h-[80px]"
+							style={{ width:data.width ? data.width : 143, height:data.height ? data.height : 80 }}
 						/>
 					</div>
 					<div className="absolute left-[120px] top-[60px]">
@@ -104,7 +104,7 @@ const Sickness = () => {
 									su paciente:{' '}
 								</p>
 								<Select
-									options={[
+									options={data[valueSickness.value].evaluation_select ?? [
 										{ value: '1', label: '1' },
 										{ value: '2', label: '2' },
 										{ value: '≥3', label: '≥3' },
@@ -135,7 +135,7 @@ const Sickness = () => {
 											borderColor: '#be2bbb !important',
 											borderWidth: 1,
 											borderRadius: 0,
-											width: 80,
+											width: data[valueSickness.value].width ?? 80
 										}),
 										option: (base, state) => ({
 											...base,
@@ -168,7 +168,7 @@ const Sickness = () => {
 								<div className="relative border-solid border-[1px] border-[#be2bbb] rounded-[30px] bg-[#fff] h-[351px] w-[300px] flex flex-col items-center">
 									{type && (
 										<p
-											className="text-[12px] px-[20px] pt-[5px]"
+											className="text-[11px] px-[20px] pt-[5px] text-[#595454]"
 											dangerouslySetInnerHTML={{
 												__html: data[
 													valueSickness.value
@@ -214,7 +214,7 @@ const Sickness = () => {
 												`step-${type.value}`
 											].length && (
 											<div
-												className="w-[30px] absolute h-full flex items-center -right-[20px]"
+												className="w-[30px] absolute h-full flex items-center -right-[20px] text-[#595454]"
 												onClick={() =>
 													setPageTest(
 														pageTest + 1 >
@@ -274,7 +274,7 @@ const Sickness = () => {
 								<div className="relative border-solid border-[1px] border-[#be2bbb] rounded-[30px] bg-[#fff] h-[351px] w-[300px] flex flex-col items-center">
 									{type && (
 										<p
-											className="text-[12px] px-[20px] pt-[5px]"
+											className="text-[12px] px-[20px] pt-[5px] text-[#595454]"
 											dangerouslySetInnerHTML={{
 												__html: data[
 													valueSickness.value
