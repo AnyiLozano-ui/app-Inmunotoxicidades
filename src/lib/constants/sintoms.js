@@ -603,7 +603,7 @@ export const sickness = {
 	},
 
 	Dermatológico: {
-		alert_image: '/Images/Dermatológico-sickness.png',
+		alert_image: '/Images/Dermatologico-sickness.png',
 		width: 216,
 		height: 84,
 		sickness: [
