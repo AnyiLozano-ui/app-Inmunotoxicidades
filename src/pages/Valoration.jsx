@@ -129,25 +129,32 @@ const Valoration = () => {
 					</Link>
 				</div>
 				<div className="mt-[40px] flex justify-center gap-[20px] mb-[70px]">
-					<div
-						className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
-						style={{ borderColor: '#be2bbb' }}>
-						<img
-							src="/Images/hematologico.png"
-							className="w-[58px]"
-						/>
-						<div className="w-[115%] text-[white] uppercase font-[700] rounded-[10px] h-[35px] flex justify-center items-center text-[12px] absolute -bottom-[20px] bg-[#be2bbb]">
-							Hematológico
+					<Link to="/sickness/Hematológico">
+						<div
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							style={{ borderColor: '#be2bbb' }}>
+							<img
+								src="/Images/hematologico.png"
+								className="w-[58px]"
+							/>
+							<div className="w-[115%] text-[white] uppercase font-[700] rounded-[10px] h-[35px] flex justify-center items-center text-[12px] absolute -bottom-[20px] bg-[#be2bbb]">
+								Hematológico
+							</div>
 						</div>
-					</div>
-					<div
-						className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
-						style={{ borderColor: '#be2bbb' }}>
-						<img src="/Images/ocular.png" className="w-[65px]" />
-						<div className="w-[115%] text-[white] uppercase font-[700] rounded-[10px] h-[35px] flex flex-col justify-center items-center text-[12px] absolute -bottom-[20px] bg-[#be2bbb] text-center leading-[16px]">
-							<p className="m-[0px]">Ocular</p>
+					</Link>
+					<Link to="/sickness/Ocular">
+						<div
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							style={{ borderColor: '#be2bbb' }}>
+							<img
+								src="/Images/ocular.png"
+								className="w-[65px]"
+							/>
+							<div className="w-[115%] text-[white] uppercase font-[700] rounded-[10px] h-[35px] flex flex-col justify-center items-center text-[12px] absolute -bottom-[20px] bg-[#be2bbb] text-center leading-[16px]">
+								<p className="m-[0px]">Ocular</p>
+							</div>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 			<Footer />

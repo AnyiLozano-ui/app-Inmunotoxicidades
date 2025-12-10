@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { sickness as mock } from '../lib/constants/sintoms'
 import Footer from '../components/common/Footer/Footer'
 import Header from '../components/common/Header/Header'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Select from 'react-select'
 
 const Sickness = () => {
@@ -13,6 +13,11 @@ const Sickness = () => {
 	const [step, setStep] = useState(0)
 	const [pageManage, setPageManage] = useState(0)
 	const [pageTest, setPageTest] = useState(0)
+
+	/* eslint-disable react-hooks/set-state-in-effect */
+	useEffect(() => {
+		if (valueSickness) setType('')
+	},[valueSickness])
 
 	return (
 		<div className="min-h-screen bg-[#f3eeee] flex flex-col items-center p-4">

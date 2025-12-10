@@ -377,6 +377,16 @@ export const sickness = {
 			},
 		},
 		'Síndrome Guillain-Barré': {
+			evaluation_select: [
+				{
+					value: '1',
+					label: '1',
+				},
+				{
+					value: '2',
+					label: '2',
+				},
+			],
 			test: {
 				'step-1': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Debilidad muscular fatigable o fluctuante, afecta más músculos proximales (cuello, hombros) que distales;</li></ul><ul><li>Puede haber afectación bulbar y ocular   (ptosis, diplopía, disfagia), debilidad facial y respiratoria.</li></ul><ul><li>Interfiere con <a style='text-decoration:underline; color: #a69f9f'>AVD</a>.</li></ul><ul><li><a style='text-decoration:underline; color: #a69f9f'>MGFA</a> clase I–II.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Consulta neurológica.</li></ul><ul><li>Anticuerpos <a style='text-decoration:underline; color: #a69f9f'>AChR</a>, <a style='text-decoration:underline; color: #a69f9f'>MuSK</a>, <a style='text-decoration:underline; color: #a69f9f'>LRP4</a>.</li></ul>",
@@ -450,7 +460,7 @@ export const sickness = {
 				],
 			},
 		},
-		Encefalitis: {
+		'Encefalitis': {
 			test: {
 				'step-1': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Confusión, alteración del comportamiento, cefalea, convulsiones, pérdida de memoria a corto plazo, disminución del nivel de conciencia, anomalías del habla, déficits motores o sensoriales.</li></ul><ul><li>Sintomas no limitantes, sin interferencia significativa en las actividades de la <a style='text-decoration:underline; color: #a69f9f'>AVD</a>.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Suspender inmunoterapia en casos leves, moderados o graves. </li></ul><ul><li>Atención hospitalaria si G3-4. </li></ul><ul><li>Terapia antiviral empírica (aciclovir IV) hasta descartar encefalitis viral.</li></ul>",
@@ -650,54 +660,54 @@ export const sickness = {
 		Prurito: {
 			evaluation_select: [
 				{
-					value: '0',
+					value: '1',
 					label: 'General',
 				},
 				{
-					value: '1',
+					value: '2',
 					label: 'Leve',
 				},
 				{
-					value: '2',
+					value: '3',
 					label: 'Moderado',
 				},
 				{
-					value: '3',
+					value: '4',
 					label: 'Grave',
 				},
 			],
 			width: '100px',
 			test: {
-				'step-0': [
+				'step-1': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Prurito sin erupción cutánea.</li></ul><ul><li>Riesgo de recurrencia tras reducción de esteroides.</li></ul><ul><li>Considerar diagnóstico diferencial (pénfigo, penfigoide, eccema, erupción liquenoide, urticaria).</li></ul>",
 				],
 
-				'step-1': [
+				'step-2': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Sensación de picazón leve o localizada, con o sin erupción cutánea.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Examen completo de piel y mucosas.</li></ul><ul><li>Antecedentes de enfermedades dermatológicas inflamatorias.</li></ul>",
 				],
 
-				'step-2': [
+				'step-3': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Prurito intenso o generalizado, intermitente.</li></ul><ul><li>Cambios cutáneos por rascado (edema, papulación, excoriaciones, liquenificación, supuración/costra).</li></ul><ul><li>Limita actividades de <a style='text-decoration:underline; color: #a69f9f'>AVD</a>.</li></ul>",
 				],
-				'step-3': [
+				'step-4': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Prurito intenso o generalizado, constante.</li></ul><ul><li>Limita las actividades de <a style='text-decoration:underline; color: #a69f9f'>AVD</a> relacionadas con cuidado personal o sueño.</li></ul><ul><li>Evaluar niveles séricos de <a style='text-decoration:underline; color: #a69f9f'>IgE</a> e histamina.</li></ul>",
 				],
 			},
 
 			manage: {
-				'step-0': [
+				'step-1': [
 					'<ul><li>Antihistamínicos orales.</li></ul><ul><li>Hidratación de todo el cuerpo con crema hidratante sin fragancia.</li></ul>',
 				],
 
-				'step-1': [
+				'step-2': [
 					'<ul><li>Continuar inmunoterapia.</li></ul><ul><li>Antihistamínicos orales</li></ul><ul><li>Hidratación con crema sin fragancia.</li></ul><ul><li>Esteroides tópicos de potencia moderada en zonas afectadas.</li></ul><ul><li>Cremas anestésicas/antipruriginosas de venta libre.</li></ul>',
 				],
 
-				'step-2': [
+				'step-3': [
 					'<ul><li>Suspender inmunoterapia.</li></ul><ul><li>Esteroides tópicos de alta potencia.</li></ul><ul><li>Gabapentinoides (gabapentina, pregabalina).</li></ul><ul><li>Fototerapia <a style="text-decoration:underline; color: #a69f9f">UVB</a> de banda estrecha en casos resistentes.</li></ul><ul><li>Consulta dermatológica.</li></ul>',
 				],
 
-				'step-3': [
+				'step-4': [
 					'<ul><li>Suspender inmunoterapia.</li></ul><ul><li><b style="color: #be2bbb">Corticoides sistémicos:</b> prednisona/metilprednisolona IV 0,5–1 mg/kg/día.</li></ul><ul><li>Gabapentinoides.</li></ul><ul><li>Si no hay respuesta en 1 mes: dupilumab, omalizumab o fototerapia <a style="text-decoration:underline; color: #a69f9f">UVB</a>.</li></ul><ul><li>Consulta dermatológica urgente.</li></ul>',
 				],
 			},
@@ -856,7 +866,7 @@ export const sickness = {
 				],
 			},
 		},
-		'Miositis': {
+		Miositis: {
 			test: {
 				'step-1': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Debilidad leve con o sin dolor; algunos pacientes pueden estar asintomáticos con <a style='text-decoration:underline; color: #a69f9f'>CK</a> elevada, otros sintomáticos con <a style='text-decoration:underline; color: #a69f9f'>CK</a> normal.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Historia y examen reumatológico y neurológico (fuerza muscular proximal, flexores del cuello, músculos distales; piel); la debilidad es más típica de miositis que el dolor. </li></ul><ul><li>Revisar condiciones previas que puedan causar síntomas similares. </li></ul><ul><li><b style='color: #be2bbb'>Laboratorio:</b> <a style='text-decoration:underline; color: #a69f9f'>CK</a>, aldolasa, <a style='text-decoration:underline; color: #a69f9f'>AST</a>/<a style='text-decoration:underline; color: #a69f9f'>ALT</a>, <a style='text-decoration:underline; color: #a69f9f'>LDH</a>, troponina (descartar compromiso cardíaco); <a style='text-decoration:underline; color: #a69f9f'>PCR</a>, <a style='text-decoration:underline; color: #a69f9f'>VSG</a>. </li></ul>",
@@ -887,7 +897,7 @@ export const sickness = {
 				],
 			},
 		},
-		'Polimialgia': {
+		Polimialgia: {
 			test: {
 				'step-1': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Dolor y rigidez leve en hombros y caderas, con rigidez matutina. </li></ul><ul><li>No limita <a style='text-decoration:underline; color: #a69f9f'>AVD</a> básicas.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Historia reumatológica completa, examen articular. </li></ul><ul><li>Tamizaje de arteritis de células gigantes (<a style='text-decoration:underline; color: #a69f9f'>GCA</a>): síntomas visuales, cefalea, claudicación mandibular, sensibilidad del cuero cabelludo.</li></ul><ul><li>Laboratorio: <a style='text-decoration:underline; color: #a69f9f'>VSG,</a> <a style='text-decoration:underline; color: #a69f9f'>PCR,</a> <a style='text-decoration:underline; color: #a69f9f'>ANA,</a> <a style='text-decoration:underline; color: #a69f9f'>FR,</a> anti-<a style='text-decoration:underline; color: #a69f9f' >CCP,</a> <a style='text-decoration:underline; color: #a69f9f'>CK.</a></li></ul>",
@@ -903,11 +913,344 @@ export const sickness = {
 			},
 
 			manage: {
-				'step-1': ['<ul><li>Continuar inmunoterapia (si no hay síntomas visuales). </li></ul><ul><li>Analgesia con acetaminofén y/o <a style="text-decoration:underline; color: #a69f9f">AINEs</a>. </li></ul><ul><li>Consulta con reumatología Iniciar prednisona 10–20 mg/día con reducción lenta durante 6–8 semanas.</li></ul><ul><li>Si no hay resolución, suspender inmunoterapia y aumentar prednisona a 30–40 mg.</li></ul><ul><li>Si no se logra reducir prednisona o no hay mejoría, considerar <a style="text-decoration:underline; color: #a69f9f">csDMARD</a> (p. ej., metotrexato) o inhibidores de IL-6 (tocilizumab o sarilumab).</li></ul>'],
+				'step-1': [
+					'<ul><li>Continuar inmunoterapia (si no hay síntomas visuales). </li></ul><ul><li>Analgesia con acetaminofén y/o <a style="text-decoration:underline; color: #a69f9f">AINEs</a>. </li></ul><ul><li>Consulta con reumatología Iniciar prednisona 10–20 mg/día con reducción lenta durante 6–8 semanas.</li></ul><ul><li>Si no hay resolución, suspender inmunoterapia y aumentar prednisona a 30–40 mg.</li></ul><ul><li>Si no se logra reducir prednisona o no hay mejoría, considerar <a style="text-decoration:underline; color: #a69f9f">csDMARD</a> (p. ej., metotrexato) o inhibidores de IL-6 (tocilizumab o sarilumab).</li></ul>',
+				],
 
-				'step-2': ['<ul><li>Considerar suspensión temporal de <a style="text-decoration:underline; color: #a69f9f">ICI</a>. </li></ul><ul><li>Iniciar prednisona 10–20 mg/día (algunos esquemas: 20 mg/día).</li></ul><ul><li>Reducir dosis tras 3–4 semanas si mejora.</li></ul><ul><li>Consulta con reumatología. </li></ul><ul><li>Si no mejora o requiere dosis altas >4 semanas, tratar como grado 3.</li></ul>'],
+				'step-2': [
+					'<ul><li>Considerar suspensión temporal de <a style="text-decoration:underline; color: #a69f9f">ICI</a>. </li></ul><ul><li>Iniciar prednisona 10–20 mg/día (algunos esquemas: 20 mg/día).</li></ul><ul><li>Reducir dosis tras 3–4 semanas si mejora.</li></ul><ul><li>Consulta con reumatología. </li></ul><ul><li>Si no mejora o requiere dosis altas >4 semanas, tratar como grado 3.</li></ul>',
+				],
 
-				'step-≥3': ['<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Iniciar prednisona 40–60 mg/día o 1 mg/kg/día según severidad. </li></ul><ul><li>En síntomas visuales: metilprednisolona IV 500–1000 mg x 3 días, luego prednisona 1 mg/kg/día con reducción lenta (8–12 semanas o más).</li></ul><ul><li>Considerar ahorradores de esteroides: metotrexato, hidroxicloroquina o inhibidores de <a style="text-decoration:underline; color: #a69f9f">IL-6</a> (tocilizumab/sarilumab). </li></ul><ul><li>Precaución: evitar <a style="text-decoration:underline; color: #a69f9f">IL-6</a> si colitis inmune. </li></ul><ul><li>Hospitalización si síntomas graves. </li></ul><ul><li>Consulta urgente con reumatología.</li></ul>'],
+				'step-≥3': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Iniciar prednisona 40–60 mg/día o 1 mg/kg/día según severidad. </li></ul><ul><li>En síntomas visuales: metilprednisolona IV 500–1000 mg x 3 días, luego prednisona 1 mg/kg/día con reducción lenta (8–12 semanas o más).</li></ul><ul><li>Considerar ahorradores de esteroides: metotrexato, hidroxicloroquina o inhibidores de <a style="text-decoration:underline; color: #a69f9f">IL-6</a> (tocilizumab/sarilumab). </li></ul><ul><li>Precaución: evitar <a style="text-decoration:underline; color: #a69f9f">IL-6</a> si colitis inmune. </li></ul><ul><li>Hospitalización si síntomas graves. </li></ul><ul><li>Consulta urgente con reumatología.</li></ul>',
+				],
+			},
+		},
+	},
+
+	Hematológico: {
+		alert_image: '/Images/Hematologico-sickness.png',
+		width: 216,
+		height: 84,
+		sickness: [
+			{
+				value: 'Anemia hemolítica',
+				label: 'Anemia hemolítica',
+			},
+			{
+				value: 'Anemia aplásica',
+				label: 'Anemia aplásica',
+			},
+			{
+				value: 'Trombocitopenia',
+				label: 'Trombocitopenia',
+			},
+			{
+				value: 'Púrpura Trombótica Trombocitopénica (PTT)',
+				label: 'Púrpura Trombótica Trombocitopénica (PTT)',
+			},
+		],
+		'Anemia hemolítica': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Puede ser asintomático o hemoglobina <límite inferior normal a 10 g/dL.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Descartar causas no relacionadas con <a style='text-decoration:underline; color: #a69f9f'>ICI</a> (virus, bacterias, drogas, mordeduras, metahemoglobinemia, fallo medular).</li></ul><ul><li>Historia clínica completa.</li></ul><ul><li>Hemograma completo con diferencial.</li></ul><ul><li><b style='color: #be2bbb'>Evidencia de hemólisis:</b> <a style='text-decoration:underline; color: #a69f9f'>LDH</a> elevada, haptoglobina elevada, bilirrubina indirecta elevada, microesferocitosis, aglutinación en frotis.</li></ul>",
+					'<ul><li>Estudios adicionales: <a style="text-decoration:underline; color: #a69f9f">TP</a>, <a style="text-decoration:underline; color: #a69f9f">TTP</a>, <a style="text-decoration:underline; color: #a69f9f">INR</a>, serología autoinmune, <a style="text-decoration:underline; color: #a69f9f">HPN</a>, médula ósea si refractario, niveles <a style="text-decoration:underline; color: #a69f9f">B12</a>/folatos/cobre, infecciones, electroforesis proteínas, crioglobulinas, <a style="text-decoration:underline; color: #a69f9f">G6PD</a>, causas farmacológicas comunes.</li></ul>',
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Hemoglobina <10 a 8 g/dL; evidencia de hemólisis y caída ≥2 g Hb sin transfusión.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Descartar causas no relacionadas con inmunoterapia (virus, bacterias, drogas, mordeduras, metahemoglobinemia, fallo medular).</li></ul><ul><li>Historia clínica completa.</li></ul><ul><li>Hemograma completo con diferencial.</li></ul><ul><li><b style='color: #be2bbb'>Evidencia de hemólisis:</b> <a style='text-decoration:underline; color: #a69f9f'>LDH</a> elevada, haptoglobina elevada, bilirrubina indirecta elevada, microesferocitosis, aglutinación en frotis.</li></ul>",
+					'<ul><li>Prueba de antiglobulina directa (Coombs).</li></ul><ul><li>Estudios adicionales: <a style="text-decoration:underline; color: #a69f9f">TP</a>, <a style="text-decoration:underline; color: #a69f9f">TTP</a>, <a style="text-decoration:underline; color: #a69f9f">INR</a>, serología autoinmune, <a style="text-decoration:underline; color: #a69f9f">HPN</a>, serología autoinmune, <a style="text-decoration:underline; color: #a69f9f">HPN</a>, médula ósea si refractario, niveles <a style="text-decoration:underline; color: #a69f9f">B12</a>/folatos/cobre, infecciones, electroforesis proteínas, crioglobulinas, <a style="text-decoration:underline; color: #a69f9f">G6PD</a>, causas farmacológicas comunes.</li></ul>',
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Hemoglobina <8 g/dL.</li></ul><ul>Transfusión indicada.</ul><ul><li>Riesgo vital en grado 4.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Descartar causas no relacionadas con <a style='text-decoration:underline; color: #a69f9f'>ICI</a> (virus, bacterias, drogas, mordeduras, metahemoglobinemia, fallo medular).</li></ul><ul><li>Historia clínica completa.</li></ul><ul><li>Hemograma completo con diferencial.</li></ul><ul><li><b style='color: #be2bbb'>Evidencia de hemólisis:</b> <a style='text-decoration:underline; color: #a69f9f'>LDH</a> elevada, haptoglobina elevada, bilirrubina indirecta elevada, microesferocitosis, aglutinación en frotis.</li></ul>",
+					'<ul><li>Prueba de antiglobulina directa (Coombs).</li></ul><ul><li>Estudios adicionales: <a style="text-decoration:underline; color: #a69f9f">TP</a>, <a style="text-decoration:underline; color: #a69f9f">TTP</a>, <a style="text-decoration:underline; color: #a69f9f">INR</a>, serología autoinmune, <a style="text-decoration:underline; color: #a69f9f">HPN</a>, médula ósea si refractario, niveles <a style="text-decoration:underline; color: #a69f9f">B12</a>/folatos/cobre, infecciones, electroforesis proteínas, crioglobulinas, <a style="text-decoration:underline; color: #a69f9f">G6PD</a>, causas farmacológicas comunes. Atención hospitalaria y valoración urgente por hematología.</li></ul>',
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Continuar <a style="text-decoration:underline; color: #a69f9f">ICI</a> según criterio clínico y resultados de laboratorio.</li></ul><ul><li>Monitoreo frecuente de hemograma y pruebas de hemólisis.</li></ul><ul><li>Considerar derivación a hematología.</li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a> (considerar suspensión permanente).</li></ul><ul><li>Prednisona 0,5–1 mg/kg/día (oral).</li></ul><ul><li>Derivación a hematología.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a> permanentemente.</li></ul><ul><li>Hospitalización.</li></ul><ul><li>Corticoides IV (prednisona o metilprednisolona 1–2 mg/kg/día).</li></ul><ul><li><b style="color: #be2bbb">Transfusión según guías (mantener Hb segura:</b> 7–8 g/dL en pacientes estables).</li></ul><ul><li>Si no hay respuesta tras 3–5 días: añadir rituximab.</li></ul><ul><li><b style="color: #be2bbb">Si persiste:</b> considerar IVIG, tacrolimus, ciclofosfamida, micofenolato mofetil, ciclosporina, ATG o infliximab.</li></ul>',
+				],
+			},
+		},
+
+		'Anemia aplásica': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>ANC >500/mm³, médula hipocelular (<25 %), plaquetas >20 000, reticulocitos >20 000.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Historia clínica completa (medicamentos, radiación, toxinas, infecciones virales).</li></ul><ul><li>Hemograma completo, frotis, recuento de reticulocitos.</li></ul><ul><li>Estudios virales: <a style='text-decoration:underline; color: #a69f9f'>CMV</a>, <a style='text-decoration:underline; color: #a69f9f'>HHV-6</a>, <a style='text-decoration:underline; color: #a69f9f'>VEB</a>, parvovirus.</li></ul><ul><li>Evaluación nutricional: <a style='text-decoration:underline; color: #a69f9f'>B12</a>, folato, hierro, cobre, vitamina D.</li></ul><ul><li><a style='text-decoration:underline; color: #a69f9f'>LDH</a> sérica, función renal.</li></ul>",
+					'<ul><li>Biopsia y aspirado de médula ósea.</li></ul><ul><li>Citometría de flujo para <a style="text-decoration:underline; color: #a69f9f">HPN</a>.</li></ul><ul><li>Cribado para transfusiones (irradiadas y filtradas).</li></ul>',
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Médula <25 % + 2 criterios: ANC <500, plaquetas <20 000, reticulocitos <20 000.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Confirmación de criterios de gravedad.</li></ul><ul><li>Historia clínica completa (medicamentos, radiación, toxinas, infecciones virales).</li></ul><ul><li>Hemograma completo, frotis, recuento de reticulocitos.</li></ul><ul><li>Estudios virales: <a style='text-decoration:underline; color: #a69f9f'>CMV</a>, <a style='text-decoration:underline; color: #a69f9f'>HHV-6</a>, <a style='text-decoration:underline; color: #a69f9f'>VEB</a>, parvovirus.</li></ul><ul><li>Evaluación nutricional: <a style='text-decoration:underline; color: #a69f9f'>B12</a>, folato, hierro, cobre, vitamina D.</li></ul>",
+					'<ul><li><a style="text-decoration:underline; color: #a69f9f">LDH</a> sérica, función renal.</li></ul><ul><li>Biopsia y aspirado de médula ósea.</li></ul><ul><li>Citometría de flujo para <a style="text-decoration:underline; color: #a69f9f">HPN</a>.</li></ul><ul><li>Cribado para transfusiones (irradiadas y filtradas).</li></ul>',
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>ANC <200, plaquetas <20 000, reticulocitos <20 000 + médula <25 %.</li></ul><ul><li>Riesgo vital.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Historia clínica completa (medicamentos, radiación, toxinas, infecciones virales).</li></ul><ul><li>Hemograma completo, frotis, recuento de reticulocitos.</li></ul><ul><li>Estudios virales: <a style='text-decoration:underline; color: #a69f9f'>CMV</a>, <a style='text-decoration:underline; color: #a69f9f'>HHV-6</a>, <a style='text-decoration:underline; color: #a69f9f'>VEB</a>, parvovirus.</li></ul><ul><li>Evaluación nutricional: <a style='text-decoration:underline; color: #a69f9f'>B12</a>, folato, hierro, cobre, vitamina D.</li></ul><ul><li><a style='text-decoration:underline; color: #a69f9f'>LDH</a> sérica, función renal.</li></ul>",
+					'<ul><li>Biopsia y aspirado de médula ósea.</li></ul><ul><li>Citometría de flujo para <a style="text-decoration:underline; color: #a69f9f">HPN</a>.</li></ul><ul><li>Cribado para transfusiones (irradiadas y filtradas).</li></ul><ul><li>Monitoreo semanal hasta mejoría.</li></ul><ul><li>Confirmación de criterios de gravedad:</li></ul><ul><li><b style="color: #be2bbb">Grave:</b> cumplir 2 de los siguientes: reticulocitos <50–60 x10⁹/L, plaquetas <20 x10⁹/L, <a style="text-decoration:underline; color: #a69f9f">ANC</a> <0,5 x10⁹/L.</li></ul><ul><li><b style="color: #be2bbb">Muy grave:</b> igual que grave, pero <a style="text-decoration:underline; color: #a69f9f">ANC</a> <0,2 x10⁹/L.</li></ul>',
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Ofrecer soporte con factores de crecimiento.</li></ul><ul><li>Seguimiento clínico estricto y evaluación con laboratorios.</li></ul><ul><li>Soporte transfusional según guías.</li></ul><ul><li>Consulta con hematología</li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Consultar hematología.</li></ul><ul><li>Administrar <a style="text-decoration:underline; color: #a69f9f">ATG</a> equino + ciclosporina.</li></ul><ul><li>Transfusiones irradiadas y filtradas.</li></ul><ul><li>Evaluar <a style="text-decoration:underline; color: #a69f9f">HLA</a> para trasplante.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Hospitalización.</li></ul><ul><li>Transfusiones según protocolos.</li></ul><ul><li>Soporte con factores de crecimiento (p. ej., <a style="text-decoration:underline; color: #a69f9f">G-CSF</a>).</li></ul><ul><li>Corticoides IV (prednisona o metilprednisolona 1–2 mg/kg/día).</li></ul><ul><li>Si no hay respuesta tras 7 días: considerar <a style="text-decoration:underline; color: #a69f9f">IVIG</a>, ciclosporina, <a style="text-decoration:underline; color: #a69f9f">ATG</a>, micofenolato mofetil y tacrolimus.</li></ul><ul><li>Evaluar tipificación <a style="text-decoration:underline; color: #a69f9f">HLA</a> y trasplante hematopoyético si refractario.</li></ul>',
+					'<ul><li><b style="color: #be2bbb">En refractarios:</b> repetir inmunosupresión con <a style="text-decoration:underline; color: #a69f9f">ATG</a> de conejo + ciclosporina y añadir ciclofosfamida; considerar eltrombopag.</li></ul>',
+				],
+			},
+		},
+
+		Trombocitopenia: {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Criterio:</b></span><ul><li>Plaquetas < límite inferior normal – 75 000/mm³.</li></ul><span style='color: #be2bbb'><b>Evaluación:</b></span><ul><li>Hemograma seriado, frotis de sangre periférica, reticulocitos, <a style='text-decoration:underline; color: #a69f9f'>TP</a>/<a style='text-decoration:underline; color: #a69f9f'>TTP</a>/<a style='text-decoration:underline; color: #a69f9f'>INR</a>fibrinógeno, eco abdominal, panel infeccioso (<a style='text-decoration:underline; color: #a69f9f'>VIH</a>, <a style='text-decoration:underline; color: #a69f9f'>VHC</a>, <a style='text-decoration:underline; color: #a69f9f'>H</a>. <a style='text-decoration:underline; color: #a69f9f'>pylori</a>). </li></ul><ul><li>Considerar aspirado/biopsia de médula ósea si otros parámetros alterados o sospecha de anemia aplásica. </li></ul><ul><li><b style='color: #be2bbb'>Descartar causas:</b> fármacos, infecciones, <a style='text-decoration:underline; color: #a69f9f'>PTT</a>, <a style='text-decoration:underline; color: #a69f9f'>SHU</a>, <a style='text-decoration:underline; color: #a69f9f'>HLH</a>.</li></ul>",
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Criterio:</b></span><br/><ul><li><b style='color: #be2bbb'>Grado 3:</b> plaquetas 50 000–25 000/mm³.</li></ul><ul><li><b style='color: #be2bbb'>Grado 4:</b> plaquetas <25 000/mm³.</li></ul><span style='color: #be2bbb'><b>Evaluación:</b></span><ul><li>Hospitalizaión y valoración por hematología.</li></ul><ul><li>Hemograma seriado, frotis de sangre periférica, reticulocitos, <a style='text-decoration:underline; color: #a69f9f'>TP</a>/<a style='text-decoration:underline; color: #a69f9f'>TTP</a>/<a style='text-decoration:underline; color: #a69f9f'>INR</a>/fibrinógeno, eco abdominal, panel infeccioso (<a style='text-decoration:underline; color: #a69f9f'>VIH</a>, <a style='text-decoration:underline; color: #a69f9f'>VHC</a>, H. pylori). </li></ul><ul><li>Considerar aspirado/biopsia de médula ósea si otros parámetros alterados o sospecha de anemia aplásica. </li></ul><ul><li>Descartar causas: fármacos, infecciones, <a style='text-decoration:underline; color: #a69f9f'>PTT</a>, <a style='text-decoration:underline; color: #a69f9f'>SHU</a>, <a style='text-decoration:underline; color: #a69f9f'>HLH</a>.</li></ul>",
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Criterio:</b></span><br/><ul><li><b style='color: #be2bbb'>Grado 3:</b> plaquetas 50 000–25 000/mm³.</li></ul><ul><li><b style='color: #be2bbb'>Grado 4:</b> plaquetas <25 000/mm³.</li></ul><span style='color: #be2bbb'><b>Evaluación:</b></span><ul><li>Hospitalizaión y valoración por hematología</li></ul><ul><li>Hemograma seriado, frotis de sangre periférica, reticulocitos, <a style='text-decoration:underline; color: #a69f9f'>TP</a>/<a style='text-decoration:underline; color: #a69f9f'>TTP</a>/<a style='text-decoration:underline; color: #a69f9f'>INR</a>/fibrinógeno, eco abdominal, panel infeccioso (<a style='text-decoration:underline; color: #a69f9f'>VIH</a>, <a style='text-decoration:underline; color: #a69f9f'>VHC</a>, <a style='text-decoration:underline; color: #a69f9f'>H</a>. pylori). </li></ul><ul><li>Considerar aspirado/biopsia de médula ósea si otros parámetros alterados o sospecha de anemia aplásica. </li></ul><ul><li>Descartar causas: fármacos, infecciones, <a style='text-decoration:underline; color: #a69f9f'>PTT</a>, <a style='text-decoration:underline; color: #a69f9f'>SHU</a>, <a style='text-decoration:underline; color: #a69f9f'>HLH</a>.</li></ul>",
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Suspender inmunoterapia.</li></ul><ul><li>Si no mejora en 4–6 semanas, considerar prednisona o metilprednisolona IV 1 mg/kg/día por 2–4 semanas, luego reducir en 4–6 semanas.</li></ul><ul><li>Añadir <a style="text-decoration:underline; color: #a69f9f">IVIG</a> si hay sangrado.</li></ul><ul><li>Derivación a hematología.</li></ul>',
+				],
+
+				'step-2': [
+					'<span style="color: #be2bbb"><b>Grado 3:</b></span><ul><li>Suspender inmunoterapia.</li></ul><ul><li>Atención hospitalaria, valoración por hematología.</li></ul><ul><li>Prednisona o metilprednisolona IV 1–2 mg/kg/día</li></ul><ul><li>Añadir <a style="text-decoration:underline; color: #a69f9f">IVIG</a> si hay sangrado.</li></ul><ul>Si no hay respuesta tras 1–2 semanas, considerar rituximab o agonistas del receptor de trombopoyetina (romiplostim, eltrombopag).</ul>',
+					'<span style="color: #be2bbb"><b>Grado 4:</b></span><ul><li>Igual manejo que grado 3, con monitoreo intensivo y soporte transfusional según protocolos.</li></ul><span style="color: #be2bbb"><b>Manejo adicional:</b></span><ul><li>Casos graves o refractarios: añadir inmunoglobulina IV (0,5 g/kg/día por 5 días).</li></ul><ul><li>Debe administrarse además de esteroides. También se puede considerar el uso de rituximab.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<span style="color: #be2bbb"><b>Grado 3:</b></span><ul><li>Suspender inmunoterapia.</li></ul><ul><li>Atención hospitalaria, valoración por hematología.</li></ul><ul><li>Prednisona o metilprednisolona IV 1–2 mg/kg/día.</li></ul><ul><li>Añadir IVIG si hay sangrado.</li></ul><ul><li>Si no hay respuesta tras 1–2 semanas, considerar rituximab o agonistas del receptor de trombopoyetina (romiplostim, eltrombopag).</li></ul>',
+					'<span style="color: #be2bbb"><b>Grado 4:</b></span><ul><li>Igual manejo que grado 3, con monitoreo intensivo y soporte transfusional según protocolos.</li></ul><span style="color: #be2bbb"><b>Manejo adicional:</b></span><ul><li>Casos graves o refractarios: añadir inmunoglobulina IV (0,5 g/kg/día por 5 días).</li></ul><ul><li>Debe administrarse además de esteroides. También se puede considerar el uso de rituximab.</li></ul>',
+				],
+			},
+		},
+
+		'Púrpura Trombótica Trombocitopénica (PTT)': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Criterios:</b></span><ul><li>Esquistocitos sin anemia, insuficiencia renal ni trombocitopenia clínica.</li></ul><span style='color: #be2bbb'><b>Evaluación:</b></span><ul><li>Historia dirigida por fármacos (<a style='text-decoration:underline; color: #a69f9f'>CTX</a>, sirolimus, tacrolimus, oximorfona, antibióticos, quinina). </li></ul><ul><li>Hematología. Exploración y frotis para esquistocitos.</li></ul><ul><li><b style='color: #be2bbb'>ADAMTS13:</b> actividad y inhibidor. <a style='text-decoration:underline; color: #a69f9f'>LDH</a>, haptoglobina, reticulocitos, bilirrubina, <a style='text-decoration:underline; color: #a69f9f'>EGO</a>.</li></ul><ul><li><a style='text-decoration:underline; color: #a69f9f'>TP</a>/<a style='text-decoration:underline; color: #a69f9f'>TTP</a>/fibrinógeno.</li></ul><ul><li>Coombs directo, grupo y anticuerpos. </li></ul>",
+					'<ul><li>Considerar <a style="text-decoration:underline; color: #a69f9f">TC</a>/<a style="text-decoration:underline; color: #a69f9f">RM</a> cerebral, <a style="text-decoration:underline; color: #a69f9f">ECO</a>/<a style="text-decoration:underline; color: #a69f9f">EKG</a>. </li></ul><ul><li>Serología <a style="text-decoration:underline; color: #a69f9f">CMV</a>.</li></ul><ul><b>Nota:</b> este trastorno suele asociarse con una disminución grave del recuento plaquetario y hemólisis o anemia precipitada (microangiopatía).</ul>',
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Criterios:</b></span><br/><ul><li>Esquistocitos + anemia y trombocitopenia moderada.</li></ul><span style='color: #be2bbb'><b>Evaluación:</b></span><ul><li>Historia dirigida por fármacos (<a style='text-decoration:underline; color: #a69f9f'>CTX</a>, sirolimus, tacrolimus, oximorfona, antibióticos, quinina). </li></ul><ul><li>Hematología. Exploración y frotis para esquistocitos. </li></ul><ul><li><b style='color: #be2bbb'>ADAMTS13:</b> actividad y inhibidor. <a style='text-decoration:underline; color: #a69f9f'>LDH</a>, haptoglobina, reticulocitos, bilirrubina, <a style='text-decoration:underline; color: #a69f9f'>EGO</a>.</li></ul><ul><li><a style='text-decoration:underline; color: #a69f9f'>TP</a>/<a style='text-decoration:underline; color: #a69f9f'>TTP</a>/fibrinógeno.</li></ul><ul><li>Coombs directo, grupo y anticuerpos. </li></ul>",
+					'<ul><li>Considerar <a style="text-decoration:underline; color: #a69f9f">TC</a>/<a style="text-decoration:underline; color: #a69f9f">RM</a> cerebral, <a style="text-decoration:underline; color: #a69f9f">ECO</a>/<a style="text-decoration:underline; color: #a69f9f">EKG</a>. </li></ul><ul><li>Serología <a style="text-decoration:underline; color: #a69f9f">CMV</a>.</li></ul><ul><b>Nota:</b> este trastorno suele asociarse con una disminución grave del recuento plaquetario y hemólisis o anemia precipitada (microangiopatía).</ul>',
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Criterios:</b></span><br/><ul><li><b style='color: #be2bbb'>Grado 3:</b> hallazgos de laboratorio con consecuencias clínicas (trombocitopenia grave, anemia, insuficiencia renal).</li></ul><ul><li><b style='color: #be2bbb'>Grado 4:</b> consecuencias potencialmente mortales (hemorragia o trombosis <a style='text-decoration:underline; color: #a69f9f'>SNC</a>, insuficiencia renal grave).</li></ul><span style='color: #be2bbb'><b>Evaluación:</b></span><ul><li>Hospitalización</li></ul><ul><li>Historia dirigida por fármacos (<a style='text-decoration:underline; color: #a69f9f'>CTX</a>, sirolimus, tacrolimus, oximorfona, antibióticos, quinina). </li></ul><ul><li>Hematología. Exploración y frotis para esquistocitos.</li></ul>",
+					'<ul><li><b style="color: #be2bbb">ADAMTS13</b>: actividad y inhibidor. LDH, haptoglobina, reticulocitos, bilirrubina, EGO. </li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TP</a>/<a style="text-decoration:underline; color: #a69f9f">TTP</a>/fibrinógeno.</li></ul><ul><li>Coombs directo, grupo y anticuerpos. </li></ul><ul><li>Considerar <a style="text-decoration:underline; color: #a69f9f">TC</a>/<a style="text-decoration:underline; color: #a69f9f">RM</a> cerebral, <a style="text-decoration:underline; color: #a69f9f">ECO</a>/<a style="text-decoration:underline; color: #a69f9f">EKG</a>. </li></ul><ul><li>Serología <a style="text-decoration:underline; color: #a69f9f">CMV</a>.</li></ul><ul><b>Nota:</b> este trastorno suele asociarse con una disminución grave del recuento plaquetario y hemólisis o anemia precipitada (microangiopatía).</ul>',
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Prednisona 0,5–1 mg/kg/día.</li></ul><ul><li>Analice la reanudación con el paciente solo después de considerar los riesgos y beneficios, teniendo en cuenta que actualmente no existen datos que recomienden reiniciar la terapia <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul><ul><li>Prednisona 0,5–1 mg/kg/día.</li></ul><ul><li>Analice la reanudación con el paciente solo después de considerar los riesgos y beneficios, teniendo en cuenta que actualmente no existen datos que recomienden reiniciar la terapia <a style="text-decoration:underline; color: #a69f9f">ICI</a>.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<span style="color: #be2bbb"><b>Grado 3:</b></span><ul><li>Suspender <a style="text-decoration:underline; color: #a69f9f">ICI</a>. </li></ul><ul><li>Iniciar <a style="text-decoration:underline; color: #a69f9f">PEX</a> según guías. Metilprednisolona 1 g IV por 3 días (primera dosis tras <a style="text-decoration:underline; color: #a69f9f">PEX</a>). </li></ul><ul><li>Considerar rituximab.</li></ul><ul><li>Administre 1 g de metilprednisolona IV al día durante 3 días, aplicando la primera dosis inmediatamente después de la primera <a style="text-decoration:underline; color: #a69f9f">PEX</a>. En pacientes que presenten una respuesta inicial en el recuento plaquetario, suspenda la <a style="text-decoration:underline; color: #a69f9f">PEX</a>.</li></ul>',
+					'<span style="color: #be2bbb"><b>Grado 4:</b></span><ul><li>Igual que G3 + considerar caplacizumab si <b style="color: #be2bbb">ADAMTS13</b> <10 % o inhibidor presente.</li></ul><ul><li>Si no se produce una exacerbación en los 3 a 5 días posteriores a la interrupción del tratamiento con PEX, se debe reducir gradualmente la dosis de esteroides durante 2 a 3 semanas, completar el tratamiento con rituximab (si se está administrando) y suspender el tratamiento con caplacizumab (si se está administrando).</li></ul>',
+				],
+			},
+		},
+	},
+
+	Ocular: {
+		alert_image: '/Images/Ocular-sickness.png',
+		width: 216,
+		height: 84,
+		sickness: [
+			{
+				value: 'Uveítis',
+				label: 'Uveítis',
+			},
+			{
+				value: 'Epiescleritis',
+				label: 'Epiescleritis',
+			},
+			{
+				value: 'Escleritis',
+				label: 'Escleritis',
+			},
+			{
+				value: 'Queratitis',
+				label: 'Queratitis',
+			},
+			{
+				value: 'Maculopatía',
+				label: 'Maculopatía',
+			},
+		],
+		'Uveítis': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Visión borrosa, puntos ciegos, cambios en visión del color, fotofobia, dolor, hinchazón de párpados, proptosis.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Evaluación oftalmológica esencial: agudeza visual, visión del color, pupilas, reflejo rojo, examen fundoscópico, lámpara de hendidura, presión ocular.</li></ul>",
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Dolor ocular, fotofobia marcada, visión doble, cambios en campo visual, escotomas.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Evaluación oftalmológica urgente con estudios completos.</li></ul><ul><li>Puede requerir <a style='text-decoration:underline; color: #a69f9f'>RM</a> cerebral si hay síntomas bulbares.</li></ul>",
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Miodesopsias, pérdida significativa de visión, dolor ocular intenso.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Evaluación oftalmologica inmediata y urgente</li></ul><ul><li>Descartar otras causas graves (patología vascular, <a style='text-decoration:underline; color: #a69f9f'>SNC</a>)</li></ul>",
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Continuar inmunoterapia.</li></ul><ul><li>Derivación a oftalmología (idealmente en ≤1 semana)</li></ul><ul><li>Lágrimas artificiales.</li></ul><ul><li>Corticoides tópicos si es necesario.</li></ul><ul><li>Evitar corticoides sistémicos en casos leves.</li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Suspender temporalmente inmunoterapia hasta valoración oftalmológica.</li></ul><ul><li>Corticoides tópicos (prednisolona 1%), agentes ciclopléjicos (atropina).</li></ul><ul><li>Corticoides sistémicos si es necesario.</li></ul><ul><li>Reanudar inmunoterapia cuando se reduzca a ≤<a style="text-decoration:underline; color: #a69f9f">G1</a> y esteroides sistémicos ≤10 mg prednisona equivalente.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<ul><li>Suspender definitivamente inmunoterapia. </li></ul><ul><li>Corticoides sistémicos ± intravítreos/perioculares.</li></ul><ul><li>Metotrexato en casos refractarios a corticoides sistémicos.</li></ul><ul><li>Manejo guiado estrictamente por oftalmología.</li></ul>',
+				],
+			},
+		},
+
+		'Epiescleritis': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Puede ser asintomática o presentar:</li></ul><ul><li>Visión borrosa, distorsión, cambios en visión del color, fotofobia, escotomas, diplopía, dolor ocular, sensibilidad, hinchazón de párpados, proptosis, enrojecimiento/sequedad.</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo, visión del color, reflejo rojo, pupilas (tamaño, forma, reactividad), presión ocular, examen fundoscópico con dilatación, examen con lámpara de hendidura, inspección anterior con linterna.</li></ul>",
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Disminución moderada de la visión (≤3 líneas respecto al basal, visión 20/40 o mejor). </li></ul><ul><li>Sintomático con alteraciones visuales más marcadas.</li></ul>",
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Disminución marcada de la visión (peor que 20/40 hasta 20/200).</li></ul><ul><li>Sintomático y visión peor que 2/40.</li></ul><ul><li>En casos graves, visión de 20/200 o peor.</li></ul><ul><li>Pérdida visual grave. </li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul>Evaluación oftalmologica inmediata y urgente</ul><ul>Descartar otras causas graves (patología vascular, <a style='text-decoration:underline; color: #a69f9f'>SNC</a>)</ul>",
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Continuar inmunoterapia.</li></ul><ul><li>Lágrimas artificiales.</li></ul><ul><li>Remisión rápida al oftalmólogo (en el plazo de una semana).</li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Suspender temporalmente inmunoterapia hasta valoración oftalmológica.</li></ul><ul><li>Remisión urgente al oftalmólogo.</li></ul><ul><li>Corticoides tópicos (ej. prednisolona 1%), agentes ciclopléjicos (ej. atropina), corticoides sistémicos.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<ul><li>Suspender permanentemente inmunoterapia.</li></ul><ul><li>Remisión urgente al oftalmólogo.</li></ul><ul><li>Corticoides sistémicos y tópicos con ciclopléjicos.</li></ul>',
+				],
+			},
+		},
+
+		'Escleritis': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia </li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+					'<ul><li>Reflejo rojo.</li></ul><ul><li>Examen fundoscópico con dilatación.</li></ul><ul><li>Examen con lámpara de hendidura.</li></ul><ul><li>Evaluar otras causas comunes, incluidas las <a style="text-decoration:underline; color: #a69f9f">EI</a>.</li></ul>',
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia</li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+					'<ul><li>Reflejo rojo.</li></ul><ul><li>Examen fundoscópico con dilatación.</li></ul><ul><li>Examen con lámpara de hendidura.</li></ul><ul><li>Evaluar otras causas comunes, incluidas las <a style="text-decoration:underline; color: #a69f9f">EI</a>.</li></ul>',
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia </li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+					'<ul><li>Reflejo rojo.</li></ul><ul><li>Examen fundoscópico con dilatación.</li></ul><ul><li>Examen con lámpara de hendidura.</li></ul><ul><li>Evaluar otras causas comunes, incluidas las <a style="text-decoration:underline; color: #a69f9f">EI</a>.</li></ul>',
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>AINEs orales (por ejemplo, flurbiprofeno, indometacina)</li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Pausar la inmunoterapia.</li></ul><ul><li>Tratamiento guiado por oftalmología que incluya prednisona sistémica/metilprednisolona intravenosa.</li></ul>',
+				],
+
+				'step-≥3': [
+					'<ul><li>Pausar la inmunoterapia.</li></ul><ul><li>Tratamiento guiado por oftalmología que incluya prednisona sistémica/metilprednisolona intravenosa.</li></ul>',
+				],
+			},
+		},
+
+		'Queratitis': {
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia</li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+					'<ul><li>Reflejo rojo.</li></ul><ul><li>Examen fundoscópico con dilatación.</li></ul><ul><li>Examen con lámpara de hendidura.</li></ul><ul><li>Evaluar otras causas comunes, incluidas las <a style="text-decoration:underline; color: #a69f9f">EI</a>.</li></ul>',
+				],
+
+				'step-2': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia</li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+					'<ul><li>Reflejo rojo.</li></ul><ul><li>Examen fundoscópico con dilatación.</li></ul><ul><li>Examen con lámpara de hendidura.</li></ul><ul><li>Evaluar otras causas comunes, incluidas las <a style="text-decoration:underline; color: #a69f9f">EI</a>.</li></ul>',
+				],
+
+				'step-≥3': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia</li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+					'<ul><li>Reflejo rojo.</li></ul><ul><li>Examen fundoscópico con dilatación.</li></ul><ul><li>Examen con lámpara de hendidura.</li></ul><ul><li>Evaluar otras causas comunes, incluidas las <a style="text-decoration:underline; color: #a69f9f">EI</a>.</li></ul>',
+				],
+			},
+
+			manage: {
+				'step-1': [
+					'<ul><li>Continuar inmunoterapia.</li></ul><ul><li>Lágrimas artificiales.<b style="color: transparent">fgfgfdgdfgdfgssdssss</b></li></ul>',
+				],
+
+				'step-2': [
+					'<ul><li>Continuar inmunoterapia.</li></ul><ul><li>Gotas tópicas (p. ej., ciclosporina, gotas oftálmicas al 0,05 %, prednisolona, ​​gotas oftálmicas).</li></ul>',
+				],
+
+				'step-≥3': [
+					'<ul><li>Pausar la inmunoterapia.</li></ul><ul><li>Tratamiento guiado por oftalmología que incluye esteroides oftálmicos o prednisona sistémica/metilprednisolona intravenosa.</li></ul>',
+				],
+			},
+		},
+
+		'Maculopatía': {
+			evaluation_select: [
+				{
+					value: '1',
+					label: '1',
+				},
+			],
+			test: {
+				'step-1': [
+					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Visión borrosa / distorsionada</li></ul><ul><li>Puntos ciegos</li></ul><ul><li>Cambios en la visión del color</li></ul><ul><li>Fotofobia </li></ul><ul><li>Sensibilidad/dolor </li></ul><ul><li>Hinchazón de los párpados y proptosis</li></ul><span style='color: #be2bbb'><b>Evaluación de oftalmología:</b></span><ul><li>Agudeza visual en cada ojo.</li></ul><ul><li>Visión del color.</li></ul><ul><li>Tamaño, forma y reactividad de la pupila.<b style='color: transparent'>fgfgfdgdfgdfg</b></li></ul>",
+				],
+			},
+
+			manage: {
+				'step-1': ['<ul><li>Suspender la inmunoterapia.</li></ul><ul><li>Tratamiento guiado por oftalmología que incluya esteroides oftálmicos o prednisona sistémica/metilprednisolona intravenosa.</li></ul>'],
 			},
 		},
 	},
