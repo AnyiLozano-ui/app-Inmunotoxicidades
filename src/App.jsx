@@ -8,6 +8,7 @@ import FichasInteractivas from "./pages/FichasInteractivas.jsx";
 import Pdfs from "./pages/Pdfs.jsx";
 import ResourcesType from "./pages/ResourcesType.jsx";
 import Instructions from "./pages/Instructions.jsx";
+import Referencias from "./pages/Referencias.jsx";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="/valoration" element={<Valoration />} />
       <Route path='sickness/:sickness' element={<Sickness/>} />
       <Route path='/instructions' element={<Instructions/>} />
+      <Route path='/referencias' element={<Referencias/>} />
     </Routes>
   );
 }

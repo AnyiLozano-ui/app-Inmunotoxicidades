@@ -34,7 +34,7 @@ const Header = () => {
 						/>
 					</Link>
 
-					<Link to="/menu">
+					<Link to="/referencias">
 						<img
 							src={menuIcon}
 							alt="Menú"
