@@ -6,6 +6,8 @@ import Valoration from "./pages/Valoration.jsx";
 import Sickness from "./pages/Sickness.jsx";
 import FichasInteractivas from "./pages/FichasInteractivas.jsx";
 import Pdfs from "./pages/Pdfs.jsx";
+import ResourcesType from "./pages/ResourcesType.jsx";
+import Instructions from "./pages/Instructions.jsx";
 
 export default function App() {
   return (
@@ -17,9 +19,11 @@ export default function App() {
       <Route path="/menu" element={<Menu />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/fichasInteractivas" element={<FichasInteractivas />} />
-      <Route path="/pdfs" element={<Pdfs />} />
+      <Route path="/:type/resources-type" element={<ResourcesType />} />
+      <Route path="/:type/pdfs/:enfermedad" element={<Pdfs />} />
       <Route path="/valoration" element={<Valoration />} />
       <Route path='sickness/:sickness' element={<Sickness/>} />
+      <Route path='/instructions' element={<Instructions/>} />
     </Routes>
   );
 }

@@ -19,28 +19,34 @@ const FichasInteractivas = () => {
 						actualizado de toxicidades asociadas a inmunoterapia.
 					</p>
 				</div>
-				<Link to="/pdfs">
+				<Link to="/nccn/resources-type">
 					<div className="flex justify-center mt-[40px]">
 						<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
 							NCCN
 						</button>
 					</div>
 				</Link>
-				<div className="flex justify-center mt-[40px]">
-					<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
-						ASCO
-					</button>
-				</div>
-				<div className="flex justify-center mt-[40px]">
-					<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
-						SITC
-					</button>
-				</div>
-				<div className="flex justify-center mt-[40px]">
-					<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
-						ESMO
-					</button>
-				</div>
+				<Link to="/asco/resources-type">
+					<div className="flex justify-center mt-[40px]">
+						<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
+							ASCO
+						</button>
+					</div>
+				</Link>
+				<Link to="/sitc/resources-type">
+					<div className="flex justify-center mt-[40px]">
+						<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
+							SITC
+						</button>
+					</div>
+				</Link>
+				<Link to="/esmo/resources-type">
+					<div className="flex justify-center mt-[40px]">
+						<button className="bg-[#be2bbb] w-[254px] h-[54px] text-[white] font-bold uppercase text-[30px] px-[45px] py-[12px] rounded-[15px] shadow-[0_3px_4px_rgba(0,0,0,0.2)] border-none outline-none">
+							ESMO
+						</button>
+					</div>
+				</Link>
 			</div>
 			<Footer />
 		</div>

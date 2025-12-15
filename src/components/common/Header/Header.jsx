@@ -26,7 +26,7 @@ const Header = () => {
 						/>
 					</Link>
 
-					<Link to="/info">
+					<Link to="/instructions">
 						<img
 							src={infoIcon}
 							alt="Información"
