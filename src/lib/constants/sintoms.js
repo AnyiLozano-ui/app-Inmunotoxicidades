@@ -1,3 +1,20 @@
+const tooltips = {
+	TAC: 'TAC: lorem',
+	PFP: 'Prueba de función pulmonar',
+	ICI: 'Inhibidores de puntos de control inmunitario'
+}
+
+const insertTooltipTag = (tooltip) => {
+	return `
+		<a class='tt'>
+			${tooltip}
+			<span id='tip1' class='tt__text' role='tooltip'>
+				${tooltips[tooltip]}
+			</span>
+		</a>
+	`
+}
+
 export const sickness = {
 	pulmonar: {
 		alert_image: '/Images/pulmonar-sickness.png',
@@ -12,18 +29,18 @@ export const sickness = {
 		Neumonitis: {
 			test: {
 				'step-1': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Asintomático o hallazgos radiológicos en TAC (opacidades en vidrio deslustrado, consolidación periférica, micronodularidad tipo árbol en brote).<br/><ul><li>Puede haber disnea leve.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>TAC de tórax (preferiblemente con contraste si se sospecha embolia pulmonar), oximetría de pulso, historia clínica y examen físico.</li><br/><li>Considerar pruebas de función pulmonar (PFP) si TAC negativa.</li><br/><li>Excluir neumonía infecciosa, progresión tumoral, embolia pulmonar, eventos cardíacos y carcinomatosis pleural mediante lavado broncoalveolar si hay dudas.</li>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Asintomático o hallazgos radiológicos en ${insertTooltipTag('TAC')} (opacidades en vidrio deslustrado, consolidación periférica, micronodularidad tipo árbol en brote).<br/><ul><li>Puede haber disnea leve.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>${insertTooltipTag('TAC')} de tórax (preferiblemente con contraste si se sospecha embolia pulmonar), oximetría de pulso, historia clínica y examen físico.</li><br/><li>Considerar pruebas de función pulmonar (${insertTooltipTag('PFP')}) si ${insertTooltipTag('TAC')} negativa.</li><br/><li>Excluir neumonía infecciosa, progresión tumoral, embolia pulmonar, eventos cardíacos y carcinomatosis pleural mediante lavado broncoalveolar si hay dudas.</li>`,
 				],
 				'step-2': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Disnea, tos persistente, dolor torácico, fiebre).</li><br/><li>Compromiso pulmonar >1 lóbulo o 25 % -50 % del parénquima.</li><br/><li>Limitación en AVD.</li></ul><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>TAC de alta resolución, pruebas infecciosas (hisopado nasal, cultivos de esputo, sangre y orina), broncoscopia con lavado broncoalveolar ± biopsia transbronquial.</li><br/><li>Considerar pruebas de función pulmonar.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Disnea, tos persistente, dolor torácico, fiebre).</li><br/><li>Compromiso pulmonar >1 lóbulo o 25 % -50 % del parénquima.</li><br/><li>Limitación en AVD.</li></ul><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TAC')} de alta resolución, pruebas infecciosas (hisopado nasal, cultivos de esputo, sangre y orina), broncoscopia con lavado broncoalveolar ± biopsia transbronquial.</li><br/><li>Considerar pruebas de función pulmonar.</li></ul>`,
 				],
 				'step-≥3': [
-					"<span style='color: #be2bbb'><b>Síntomas Grado 3::</b> </span><ul><li>Síntomas graves; compromiso pulmonar extenso (>50% del parénquima, todos los lóbulos).</li><br/><li>Limitación de AVD, oxígeno indicado.</li></ul><span style='color: #be2bbb'><b>Síntomas Grado 4:</b></span><ul><li>Compromiso respiratorio potencialmente mortal; requiere intervención urgente (intubación o traqueotomía).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>TAC, broncoscopia con BAL ± biopsia transbronquial, pruebas infecciosas completas.</li><br/><li>Hospitalización necesaria.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas Grado 3::</b> </span><ul><li>Síntomas graves; compromiso pulmonar extenso (>50% del parénquima, todos los lóbulos).</li><br/><li>Limitación de AVD, oxígeno indicado.</li></ul><span style='color: #be2bbb'><b>Síntomas Grado 4:</b></span><ul><li>Compromiso respiratorio potencialmente mortal; requiere intervención urgente (intubación o traqueotomía).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>TAC, broncoscopia con BAL ± biopsia transbronquial, pruebas infecciosas completas.</li><br/><li>Hospitalización necesaria.</li></ul>`,
 				],
 			},
 			manage: {
 				'step-1': [
-					'<ul><li>Continuar ICI con seguimiento estrecho o suspender temporalmente según evolución.</li><br/><li>Reevaluar en 1 semana con historia clínica, examen físico y pulsioximetría.</li><br/><li>Imágenes de tórax (radiografía o TAC) si diagnóstico incierto o para evaluar evolución.</li><br/><li>Repetir TAC en 3-4 semanas o antes si aparecen síntomas.</li><br/><li>Si no hay mejoría, manejar como grado 2.</li></ul>',
+					`<ul><li>Continuar ${insertTooltipTag('ICI')} con seguimiento estrecho o suspender temporalmente según evolución.</li><br/><li>Reevaluar en 1 semana con historia clínica, examen físico y pulsioximetría.</li><br/><li>Imágenes de tórax (radiografía o TAC) si diagnóstico incierto o para evaluar evolución.</li><br/><li>Repetir TAC en 3-4 semanas o antes si aparecen síntomas.</li><br/><li>Si no hay mejoría, manejar como grado 2.</li></ul>`,
 				],
 				'step-2': [
 					'<ul><li>Suspender ICI hasta mejoría a grado ≤1.</li>Prednisona 1-2 mg/kg/día VO, con reducción gradual en 4-6 semanas.</li><br><br><li>Considerar antibióticos empíricos si infección no descartada.</li><br/><li>Monitoreo semanal (historia clínica, examen físico, pulsioximetría, imágenes según necesidad).</li><br/><li>Si no hay mejoría en 48-72 h, tratar como grado 3.</li><br/><li>Consultar neumología e infectología.</li></ul>',
@@ -86,7 +103,7 @@ export const sickness = {
 				],
 				'step-≥3': [
 					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><b>Grado 3:</b><ul><li>Diarrea grave (≥7 deposiciones/día), incontinencia, hospitalización, limitación <a style='text-decoration:underline; color: #a69f9f'>AVD</a>.</li></ul><ul><li>Elevación marcada del volumen de ostomía.</li></ul><b>Grado 4:</b><ul><li>Consecuencias potencialmente mortales, intervención urgente.</li></ul><ul><li>Persistencia de síntomas graves pese a inmunosupresión.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>En ambos casos: </b><ul><li>En función de la disponibilidad institucional, considerar lactoferrina/calprotectina fecal.</li></ul>",
-					'<ul><li>Considerar <a style="text-decoration:underline; color: #a69f9f">TC</a> abdominal/pélvica con contraste.</li></ul><ul><li>Consulta con gastroenterología recomendada.</li></ul><ul><li>Repetir estudios infecciosos.</li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TC</a> abdomen si sospecha perforación o megacolon tóxico; colonoscopia con biopsia para ulceraciones.</li></ul><ul><li>Tamizaje <a style="text-decoration:underline; color: #a69f9f">VIH</a>, hepatitis, <a style="text-decoration:underline; color: #a69f9f">TB</a> si se planea biológicos.</li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TC</a> abdomen/pelvis si dolor o sangrado; endoscopia/colonoscopia con biopsia si persiste >5 días.</li></ul>',
+					'<ul><li>Considerar <a  >TC</a> abdominal/pélvica con contraste.</li></ul><ul><li>Consulta con gastroenterología recomendada.</li></ul><ul><li>Repetir estudios infecciosos.</li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TC</a> abdomen si sospecha perforación o megacolon tóxico; colonoscopia con biopsia para ulceraciones.</li></ul><ul><li>Tamizaje <a style="text-decoration:underline; color: #a69f9f">VIH</a>, hepatitis, <a style="text-decoration:underline; color: #a69f9f">TB</a> si se planea biológicos.</li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TC</a> abdomen/pelvis si dolor o sangrado; endoscopia/colonoscopia con biopsia si persiste >5 días.</li></ul>',
 				],
 			},
 			manage: {

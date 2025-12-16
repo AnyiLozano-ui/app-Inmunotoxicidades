@@ -39,26 +39,28 @@ export default function Menu() {
 							</div>
 						</div>
 					</Link>
-					<div className="relative flex gap-[10px] mt-[20px]">
-						<div className="flex items-center">
-							<img
-								src="/Images/mas.png"
-								className="w-[30px] h-[30px]"
-							/>
+					<Link to="/calculadora">
+						<div className="relative flex gap-[10px] mt-[20px]">
+							<div className="flex items-center">
+								<img
+									src="/Images/mas.png"
+									className="w-[30px] h-[30px]"
+								/>
+							</div>
+							<div className="relative w-full">
+								<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
+									Acceder a
+								</p>
+								<p className="text-[#595454] text-[24px] font-[700] mt-[0px] mb-[15px]">
+									la calculadora
+								</p>
+								<img
+									src="/Images/linea.png"
+									className="bottom-[0px] absolute left-[0px] w-full"
+								/>
+							</div>
 						</div>
-						<div className="relative w-full">
-							<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
-								Acceder a
-							</p>
-							<p className="text-[#595454] text-[24px] font-[700] mt-[0px] mb-[15px]">
-								la calculadora
-							</p>
-							<img
-								src="/Images/linea.png"
-								className="bottom-[0px] absolute left-[0px] w-full"
-							/>
-						</div>
-					</div>
+					</Link>
 					<Link to="/resources">
 						<div className="relative flex gap-[10px] mt-[20px]">
 							<div className="flex items-center">
@@ -102,7 +104,7 @@ export default function Menu() {
 						</div>
 						<Link to="/instructions">
 							<div className="relative w-full">
-							 	<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
+								<p className="text-[#595454] text-[24px] font-[700] mb-[5px]">
 									Conozca cómo funciona
 								</p>
 								<p className="text-[#595454] text-[24px] font-[700] mt-[0px] mb-[15px]">

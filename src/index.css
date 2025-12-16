@@ -64,3 +64,42 @@ ul {
 li::marker {
 	color: #be2bbb;
 }
+
+.tt{
+  position:relative;
+  cursor:pointer;
+  outline:none;
+  text-decoration:underline;
+  color: #a69f9f;
+}
+
+/* tooltip bubble */
+.tt__text{
+  position:absolute;
+  bottom:130%;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  color:#fff;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:12px;
+  white-space:nowrap;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .2s;
+  z-index:100;
+}
+
+/* Desktop hover */
+.tt:hover .tt__text{
+  opacity:1;
+  visibility:visible;
+}
+
+/* Mobile tap (focus) */
+.tt:focus .tt__text,
+.tt:focus-visible .tt__text{
+  opacity:1;
+  visibility:visible;
+}

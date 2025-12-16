@@ -18,10 +18,10 @@ const Valoration = () => {
 						Para comenzar la valoración elija el sistema afectado.
 					</p>
 				</div>
-				<div className="mt-[20px] flex justify-center gap-[20px]">
+				<div className="mt-[20px] flex justify-center gap-[20px] w-[80%] mr-auto ml-auto">
 					<Link to="/sickness/pulmonar">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/pulmonar.png"
@@ -34,7 +34,7 @@ const Valoration = () => {
 					</Link>
 					<Link to="/sickness/gastro">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/gastro.png"
@@ -48,7 +48,7 @@ const Valoration = () => {
 					</Link>
 					<Link to="/sickness/renal">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img src="/Images/renal.png" className="w-[71px]" />
 							<div className="w-[115%] text-[white] uppercase font-[700] rounded-[10px] h-[35px] flex justify-center items-center text-[12px] absolute -bottom-[20px] bg-[#be2bbb]">
@@ -60,7 +60,7 @@ const Valoration = () => {
 				<div className="mt-[40px] flex justify-center gap-[20px]">
 					<Link to="/sickness/endocrino">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/endocrino.png"
@@ -73,7 +73,7 @@ const Valoration = () => {
 					</Link>
 					<Link to="/sickness/Neurológico">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/neurologico.png"
@@ -88,7 +88,7 @@ const Valoration = () => {
 				<div className="mt-[40px] flex justify-center gap-[20px]">
 					<Link to="/sickness/CardioVascular">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/cardio.png"
@@ -102,7 +102,7 @@ const Valoration = () => {
 					</Link>
 					<Link to="/sickness/Dermatológico">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/dermatologico.png"
@@ -115,7 +115,7 @@ const Valoration = () => {
 					</Link>
 					<Link to="/sickness/MusculoEsqueletico">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/musculo.png"
@@ -131,7 +131,7 @@ const Valoration = () => {
 				<div className="mt-[40px] flex justify-center gap-[20px] mb-[70px]">
 					<Link to="/sickness/Hematológico">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/hematologico.png"
@@ -144,7 +144,7 @@ const Valoration = () => {
 					</Link>
 					<Link to="/sickness/Ocular">
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/ocular.png"

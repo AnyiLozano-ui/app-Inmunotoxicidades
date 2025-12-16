@@ -4,6 +4,7 @@ import Footer from '../components/common/Footer/Footer'
 import Header from '../components/common/Header/Header'
 import { useEffect, useState } from 'react'
 import Select from 'react-select'
+import Calculadora from './Calculadora'
 
 const Sickness = () => {
 	const { sickness } = useParams()
@@ -90,7 +91,7 @@ const Sickness = () => {
 					</div>
 				</div>
 				<div className="mt-[20px] flex items-center flex-col gap-[20px] w-[300px] mx-auto">
-					<div className="relative flex gap-[10px] mt-[20px] w-full">
+					<div className="relative flex gap-[10px] mt-[20px] w-full" onClick={() => setStep(1)}>
 						<div className="flex items-center">
 							<img
 								src="/Images/mas.png"
@@ -290,7 +291,7 @@ const Sickness = () => {
 					)}
 				</div>
 				<div className="flex items-center flex-col gap-[20px] w-[300px] mx-auto">
-					<div className="relative flex gap-[10px] mt-[20px] w-full">
+					<div className="relative flex gap-[10px] mt-[20px] w-full" onClick={() => setStep(2)}>
 						<div className="flex items-center">
 							<img
 								src="/Images/mas.png"
@@ -386,7 +387,7 @@ const Sickness = () => {
 										data[valueSickness.value].manage[
 											`step-${type.value}`
 										].length && (
-										<div className="absolute cursor-pointer -bottom-[10px] w-[150px] h-[32px] bg-[#be2bbb] rounded-[10px] shadow-none border-[none] flex justify-center items-center uppercase text-[#fff] text-[20px]">
+										<div onClick={() => setStep(3)} className="absolute cursor-pointer -bottom-[10px] w-[150px] h-[32px] bg-[#be2bbb] rounded-[10px] shadow-none border-[none] flex justify-center items-center uppercase text-[#fff] text-[20px]">
 											Continuar
 										</div>
 									)}
@@ -413,6 +414,9 @@ const Sickness = () => {
 							/>
 						</div>
 					</div>
+					{step === 3 && (
+						<Calculadora hideTitle/>
+					)}
 				</div>
 				<p className="text-[10px] text-center text-[#595454] font-[400]">
 					irAE: evento adverso inmunomediado, por sus siglas en
