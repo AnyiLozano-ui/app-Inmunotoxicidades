@@ -6,7 +6,7 @@ const DownloadMaterial = () => {
 		<div className="min-h-screen bg-[#f3eeee] flex flex-col items-center p-4">
 			<div className="w-full max-w-xs bg-white overflow-hidden">
 				<Header />
-				<div className="max-w-[80%] mb-[130px] mt-[120px] mx-auto relative">
+				<div className="max-w-[80%] mb-[110px] mt-[120px] mx-auto relative">
 					<div className="w-full max-w-[354px] border-2 border-[#be2bbb] rounded-full bg-white px-[6px] py-[5px] flex items-center gap-[6px]">
 						<img
 							src="/Images/pdfs.png"
