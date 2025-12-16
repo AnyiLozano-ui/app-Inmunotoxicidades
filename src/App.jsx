@@ -9,6 +9,7 @@ import Pdfs from "./pages/Pdfs.jsx";
 import ResourcesType from "./pages/ResourcesType.jsx";
 import Instructions from "./pages/Instructions.jsx";
 import Referencias from "./pages/Referencias.jsx";
+import DownloadMaterial from "./pages/DownloadMaterial.jsx";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <Route path='sickness/:sickness' element={<Sickness/>} />
       <Route path='/instructions' element={<Instructions/>} />
       <Route path='/referencias' element={<Referencias/>} />
+      <Route path='/download-material' element={<DownloadMaterial/>} />
     </Routes>
   );
 }

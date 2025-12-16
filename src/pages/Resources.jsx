@@ -34,17 +34,22 @@ const Resources = () => {
 							</div>
 						</div>
 					</Link>
-					<div className="border-solid relative border-[1px] border-[#be2bbb] rounded-[30px] h-[183px] flex justify-center flex-col items-center max-w-[170px] pt-[30px] bg-[#fff]">
-						<img src="/Images/download.png" className="w-[80px]" />
-						<p className="text-center text-[18px] text-[#595454] mt-[10px] mb-[40px]">
-							Acceda a material descargable
-						</p>
-						<div className="absolute -bottom-[10px] bg-[#be2bbb] rounded-[40px]">
-							<p className="m-[0px] px-[20px] py-[5px] text-[white] uppercase text-[12px]">
-								Click aquì
+					<Link to="/download-material">
+						<div className="border-solid relative border-[1px] border-[#be2bbb] rounded-[30px] h-[183px] flex justify-center flex-col items-center max-w-[170px] pt-[30px] bg-[#fff]">
+							<img
+								src="/Images/download.png"
+								className="w-[80px]"
+							/>
+							<p className="text-center text-[18px] text-[#595454] mt-[10px] mb-[40px]">
+								Acceda a material descargable
 							</p>
+							<div className="absolute -bottom-[10px] bg-[#be2bbb] rounded-[40px]">
+								<p className="m-[0px] px-[20px] py-[5px] text-[white] uppercase text-[12px]">
+									Click aquì
+								</p>
+							</div>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 			<Footer />

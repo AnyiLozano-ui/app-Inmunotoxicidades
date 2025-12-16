@@ -11,7 +11,9 @@ const pdfs = {
 		endocrino: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Endocrino/UP-R_NCCN_Endo.pdf',
 		Neurológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Neurologico/UP-R_NCCN_Neuro.pdf',
 		CardioVascular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/CardioVascular/UP-R_NCCN_Cardio.pdf',
+		Dermatológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Dermatológico/UP-R_NCCN_Derma.pdf',
 		MusculoEsqueletico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/MusculoEsqueletico/UP-R_NCCN_MusculoEsc.pdf',
+		Hematológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Hematológico/UP-R_NCCN_Hemato.pdf',
 		Ocular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Ocular/UP-R_NCCN_Ocular.pdf',
 	},
 
@@ -23,7 +25,9 @@ const pdfs = {
 		endocrino: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Endocrino/UP-R_ASCO_Endo.pdf',
 		Neurológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Neurologico/UP-R_ASCO_Neuro.pdf',
 		CardioVascular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/CardioVascular/UP-R_ASCO_Cardio.pdf',
+		Dermatológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Dermatológico/UP-R_ASCO_Derma.pdf',
 		MusculoEsqueletico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/MusculoEsqueletico/UP-R_ASCO_MusculoEsc.pdf',
+		Hematológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Hematológico/UP-R_ASCO_Hemato.pdf',
 		Ocular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Ocular/UP-R_ASCO_Ocular.pdf',
 	},
 
@@ -35,7 +39,9 @@ const pdfs = {
 		endocrino: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Endocrino/UP-R_SITC_Endo.pdf',
 		Neurológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Neurologico/UP-R_SITC_Neuro.pdf',
 		CardioVascular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/CardioVascular/UP-R_SITC_Cardio.pdf',
+		Dermatológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Dermatológico/UP-R_SITC_Derma.pdf',
 		MusculoEsqueletico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/MusculoEsqueletico/UP-R_SITC_MusculoEsc.pdf',
+		Hematológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Hematológico/UP-R_SITC_Hemato.pdf',
 		Ocular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Ocular/UP-R_SITC_Ocular.pdf',
 	},
 
@@ -47,7 +53,9 @@ const pdfs = {
 		endocrino: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Endocrino/UP-R_ESMO_Endo.pdf',
 		Neurológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Neurologico/UP-R_ESMO_Neuro.pdf',
 		CardioVascular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/CardioVascular/UP-R_ESMO_Cardio.pdf',
+		Dermatológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Dermatológico/UP-R_ESMO_Derma.pdf',
 		MusculoEsqueletico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/MusculoEsqueletico/UP-R_ESMO_MusculoEsc.pdf',
+		Hematológico: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Hematológico/UP-R_ESMO_Hemato.pdf',
 		Ocular: 'https://eml.com.co/pdfs_descargables_App_Inmuno%20/Ocular/UP-R_ESMO_Ocular.pdf',
 	},
 }

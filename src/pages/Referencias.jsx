@@ -10,7 +10,7 @@ const Referencias = () => {
 					<div>
 						<img
 							src="/Images/ref.png"
-							className="w-full mt-[30px]"
+							className="w-full mt-[20px]"
 						/>
 					</div>
 				</div>

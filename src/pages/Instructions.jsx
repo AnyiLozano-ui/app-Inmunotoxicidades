@@ -28,7 +28,7 @@ const Instructions = () => {
 						)}
 					</div>
 					<div>
-						<img src={pages[page]} className="w-full" alt="" />
+						<img src={pages[page]} className="w-full mt-[10px]" alt="" />
 					</div>
 					{page < 2 && (
 						<div className="w-[100px] flex items-center justify-center mr-[-25px]">
