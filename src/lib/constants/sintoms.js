@@ -1,16 +1,60 @@
 const tooltips = {
-	TAC: 'TAC: lorem',
-	PFP: 'Prueba de función pulmonar',
-	ICI: 'Inhibidores de puntos de control inmunitario'
+	TAC: 'TAC: lorem;',
+	PFP: 'Prueba de función pulmonar;',
+	ICI: 'Inhibidores de puntos de control inmunitario;',
+	AVD: 'Actividades de la vida diaria;',
+	VO: 'vía oral;',
+	BAL: 'lorem, lorem',
+	IV: 'Intravenosa',
+	IVIG: 'lorem, lorem',
+	TLCO: 'Capacidad de transferencia de monóxido de carbono, por sus siglas en inglés',
+	PCR: 'Proteína C reactiva;',
+	SDRA: 'Síndrome de dificultad respiratoria aguda;',
+	LBA: 'Lavado broncoalveolar;',
+	TC:'Tomografía computarizada;',
+	IgIV: 'Inmunoglobulina intravenosa;',
+	CS: 'lorem, lorem',
+	'<i>C.difficile</i>': 'Clostridioides difficile',
+	CBC: 'Hemograma completo, por sus siglas en inglés;',
+	CMP: 'Perfil metabólico completo, por sus siglas en inglés;',
+	NAAT: 'Prueba de amplificación de ácidos nucleicos, por sus siglas en inglés;',
+	BRAT: 'Dieta de plátano, arroz, compota de manzana y pan tostado, por sus siglas en inglés;',
+	AIVD: 'Actividades instrumentales de la vida diaria;',
+	TSH: 'Hormona estimulante de la tiroides;',
+	CMV: 'CitomegaloviruS',
+	'O&P': 'óvulos y parásitos, por sus siglas en inglés',
+	VIH: 'Virus de la inmunodeficiencia humana;',
+	TB: 'Tuberculosis',
+	CPRM: 'Colangiopancreatografía por resonancia magnética;',
+	G1: 'lorem, lorem',
+	AST: 'Aspartato aminotransferasa, por sus siglas en inglés;',
+	ALT: 'Alanina aminotransferasa, por sus siglas en inglés;',
+	LSN: 'Límite superior normal;',
+	ANA: 'Anticuerpos antinucleares, por sus siglas en inglés;',
+	ASMA: 'Anticuerpos anti-músculo liso, por sus siglas en inglés;',
+	ANCA: 'Anticuerpos anticitoplasma de neutrófilos, por sus siglas en inglés;',
+	GGT: 'Gamma-glutamil transferasa;',
+	ALP: 'Fosfatasa alcalina, por sus siglas en inglés;',
+	CK: 'Creatina quinasa, por sus siglas en inglés;',
+	ULN: 'lorem, lorem',
+	KDIGO: 'Enfermedad renal: mejorando los resultados globales, por sus siglas en inglés;',
+	CTCAE: 'Criterios terminológicos comunes para eventos adversos, por sus siglas en inglés;',
+	sCr: 'Creatinina sérica, por sus siglas en inglés;',
+	UPCR: 'Relación proteína/creatinina en orina, por sus siglas en inglés;',
+	ITU: 'Infección del tracto urinario;',
+	EARI: 'Eventos adversos relacionados con la inmunoterapia;',
+	K: 'potasio',
+	AKI: 'Lesión renal aguda, por sus siglas en inglés;'
+
 }
 
 const insertTooltipTag = (tooltip) => {
 	return `
 		<a class='tt'>
 			${tooltip}
-			<span id='tip1' class='tt__text' role='tooltip'>
+			<p id='tip1' class='tt__text' role='tooltip'>
 				${tooltips[tooltip]}
-			</span>
+			</p>
 		</a>
 	`
 }
@@ -26,53 +70,53 @@ export const sickness = {
 				label: 'Enfermedad pulmonar intersticial',
 			},
 		],
-		Neumonitis: {
+		'Neumonitis': {
 			test: {
 				'step-1': [
 					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Asintomático o hallazgos radiológicos en ${insertTooltipTag('TAC')} (opacidades en vidrio deslustrado, consolidación periférica, micronodularidad tipo árbol en brote).<br/><ul><li>Puede haber disnea leve.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>${insertTooltipTag('TAC')} de tórax (preferiblemente con contraste si se sospecha embolia pulmonar), oximetría de pulso, historia clínica y examen físico.</li><br/><li>Considerar pruebas de función pulmonar (${insertTooltipTag('PFP')}) si ${insertTooltipTag('TAC')} negativa.</li><br/><li>Excluir neumonía infecciosa, progresión tumoral, embolia pulmonar, eventos cardíacos y carcinomatosis pleural mediante lavado broncoalveolar si hay dudas.</li>`,
 				],
 				'step-2': [
-					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Disnea, tos persistente, dolor torácico, fiebre).</li><br/><li>Compromiso pulmonar >1 lóbulo o 25 % -50 % del parénquima.</li><br/><li>Limitación en AVD.</li></ul><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TAC')} de alta resolución, pruebas infecciosas (hisopado nasal, cultivos de esputo, sangre y orina), broncoscopia con lavado broncoalveolar ± biopsia transbronquial.</li><br/><li>Considerar pruebas de función pulmonar.</li></ul>`,
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Disnea, tos persistente, dolor torácico, fiebre).</li><br/><li>Compromiso pulmonar >1 lóbulo o 25 % -50 % del parénquima.</li><br/><li>Limitación en ${insertTooltipTag('AVD')}.</li></ul><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TAC')} de alta resolución, pruebas infecciosas (hisopado nasal, cultivos de esputo, sangre y orina), broncoscopia con lavado broncoalveolar ± biopsia transbronquial.</li><br/><li>Considerar pruebas de función pulmonar.</li></ul>`,
 				],
 				'step-≥3': [
-					`<span style='color: #be2bbb'><b>Síntomas Grado 3::</b> </span><ul><li>Síntomas graves; compromiso pulmonar extenso (>50% del parénquima, todos los lóbulos).</li><br/><li>Limitación de AVD, oxígeno indicado.</li></ul><span style='color: #be2bbb'><b>Síntomas Grado 4:</b></span><ul><li>Compromiso respiratorio potencialmente mortal; requiere intervención urgente (intubación o traqueotomía).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>TAC, broncoscopia con BAL ± biopsia transbronquial, pruebas infecciosas completas.</li><br/><li>Hospitalización necesaria.</li></ul>`,
+					`<span style='color: #be2bbb'><b>Síntomas Grado 3::</b> </span><ul><li>Síntomas graves; compromiso pulmonar extenso (>50% del parénquima, todos los lóbulos).</li><br/><li>Limitación de ${insertTooltipTag('AVD')}, oxígeno indicado.</li></ul><span style='color: #be2bbb'><b>Síntomas Grado 4:</b></span><ul><li>Compromiso respiratorio potencialmente mortal; requiere intervención urgente (intubación o traqueotomía).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>${insertTooltipTag('TAC')}, broncoscopia con ${insertTooltipTag('BAL')} ± biopsia transbronquial, pruebas infecciosas completas.</li><br/><li>Hospitalización necesaria.</li></ul>`,
 				],
 			},
 			manage: {
 				'step-1': [
-					`<ul><li>Continuar ${insertTooltipTag('ICI')} con seguimiento estrecho o suspender temporalmente según evolución.</li><br/><li>Reevaluar en 1 semana con historia clínica, examen físico y pulsioximetría.</li><br/><li>Imágenes de tórax (radiografía o TAC) si diagnóstico incierto o para evaluar evolución.</li><br/><li>Repetir TAC en 3-4 semanas o antes si aparecen síntomas.</li><br/><li>Si no hay mejoría, manejar como grado 2.</li></ul>`,
+					`<ul><li>Continuar ${insertTooltipTag('ICI')} con seguimiento estrecho o suspender temporalmente según evolución.</li><br/><li>Reevaluar en 1 semana con historia clínica, examen físico y pulsioximetría.</li><br/><li>Imágenes de tórax (radiografía o ${insertTooltipTag('TAC')}) si diagnóstico incierto o para evaluar evolución.</li><br/><li>Repetir ${insertTooltipTag('TAC')} en 3-4 semanas o antes si aparecen síntomas.</li><br/><li>Si no hay mejoría, manejar como grado 2.</li></ul>`,
 				],
 				'step-2': [
-					'<ul><li>Suspender ICI hasta mejoría a grado ≤1.</li>Prednisona 1-2 mg/kg/día VO, con reducción gradual en 4-6 semanas.</li><br><br><li>Considerar antibióticos empíricos si infección no descartada.</li><br/><li>Monitoreo semanal (historia clínica, examen físico, pulsioximetría, imágenes según necesidad).</li><br/><li>Si no hay mejoría en 48-72 h, tratar como grado 3.</li><br/><li>Consultar neumología e infectología.</li></ul>',
+					`<ul><li>Suspender ${insertTooltipTag('ICI')} hasta mejoría a grado ≤1.</li>Prednisona 1-2 mg/kg/día ${insertTooltipTag('VO')}, con reducción gradual en 4-6 semanas.</li><br><br><li>Considerar antibióticos empíricos si infección no descartada.</li><br/><li>Monitoreo semanal (historia clínica, examen físico, pulsioximetría, imágenes según necesidad).</li><br/><li>Si no hay mejoría en 48-72 h, tratar como grado 3.</li><br/><li>Consultar neumología e infectología.</li></ul>`,
 				],
 				'step-≥3': [
-					'<ul><li>Suspender ICI permanentemente.</li><br/><li>Metilprednisolona IV 1-2 mg/kg/día.</li><br/><li>Reducir progresivamente corticosteroides en ≥6 semanas.</li><br/><li>Si no hay mejoría en 48 h, añadir inmunosupresor: infliximab (5 mg/kg, repetir  en 14 días si necesario), micofenolato mofetil (1–1,5 g cada 12 h), IVIG (2 g/kg en dosis divididas), ciclofosfamida (600 mg/m²), tocilizumab (4 mg/kg IV).</li><br/><li>Consultar neumología e infectología. / Para grado 4:</li><br/><li>Considerar todo lo anterior, con hospitalización en UCI.</li></ul>',
-					'<ul><li>Considerar inmunosupresores adicionales si refractario.</li></ul><ul><li>Soporte ventilatorio avanzado.</li></ul> ',
+					`<ul><li>Suspender ${insertTooltipTag('ICI')} permanentemente.</li><br/><li>Metilprednisolona ${insertTooltipTag('IV')} 1-2 mg/kg/día.</li><br/><li>Reducir progresivamente corticosteroides en ≥6 semanas.</li><br/><li>Si no hay mejoría en 48 h, añadir inmunosupresor: infliximab (5 mg/kg, repetir  en 14 días si necesario), micofenolato mofetil (1–1,5 g cada 12 h), ${insertTooltipTag('IVIG')} (2 g/kg en dosis divididas), ciclofosfamida (600 mg/m²), tocilizumab (4 mg/kg ${insertTooltipTag('IV')}).</li><br/><li>Consultar neumología e infectología. / Para grado 4:</li><br/><li>Considerar todo lo anterior, con hospitalización en UCI.</li></ul>`,
+					`<ul><li>Considerar todo lo anterior, con hospitalización en ${insertTooltipTag('ICI')}.</li></ul><ul><li>Considerar inmunosupresores adicionales si refractario.</li></ul><ul><li>Soporte ventilatorio avanzado.</li></ul>`,
 				],
 			},
 		},
 		'Enfermedad pulmonar intersticial': {
 			test: {
 				'step-1': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Asintomático, limitado a un lóbulo pulmonar o <25 % del parénquima pulmonar.<br/><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>TAC torácico con contraste (considerar repetir el TAC torácico en caso de deterioro clínico).</li><br/><li>Pulsioximetría.</li><br/><li>Análisis de sangre (hemograma, urea, electrolitos, función hepática, función tiroidea, calcio, velocidad de sedimentación globular, proteína C reativa).</li><br/><li>Considerar muestra de esputo y cribado de infecciones víricas, oportunistas o bacterianas específicas (micoplasma, legionela), dependiendo del contexto clínico.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Asintomático, limitado a un lóbulo pulmonar o <25 % del parénquima pulmonar.<br/><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TAC')}) torácico con contraste (considerar repetir el ${insertTooltipTag('TAC')}) torácico en caso de deterioro clínico).</li><br/><li>Pulsioximetría.</li><br/><li>Análisis de sangre (hemograma, urea, electrolitos, función hepática, función tiroidea, calcio, velocidad de sedimentación globular, proteína C reativa).</li><br/><li>Considerar muestra de esputo y cribado de infecciones víricas, oportunistas o bacterianas específicas (micoplasma, legionela), dependiendo del contexto clínico.</li></ul>`,
 				],
 				'step-2': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Presencia, aparición o empeoramiento de síntomas como disnea, dificultad respiratoria, tos, dolor torácico, aumento de las necesidades de oxígeno.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>Seguimiento ambulatorio:</b><br/><ul><li>Monitorizar síntomas diariamente.</li><br/><li>TAC torácico con contraste.<br/>Considerar trabajo de infección: cultivo de esputo, sangre y orina.</li><br/><li>Broncoscopia con LBA para descartar infección e infiltración tumoral como se menciona arriba.</li></ul>",
-					'<ul><li>Indicaciones basales como las expuestas anteriormente, más: repetir radiografía de tórax semanalmente, análisis de sangre basales y pruebas de función hepática incluyendo TLCO.</li></ul>',
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Presencia, aparición o empeoramiento de síntomas como disnea, dificultad respiratoria, tos, dolor torácico, aumento de las necesidades de oxígeno.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>Seguimiento ambulatorio:</b><br/><ul><li>Monitorizar síntomas diariamente.</li><br/><li>${insertTooltipTag('TAC')}) torácico con contraste.<br/>Considerar trabajo de infección: cultivo de esputo, sangre y orina.</li><br/><li>Broncoscopia con LBA para descartar infección e infiltración tumoral como se menciona arriba.</li></ul>`,
+					`<ul><li>Indicaciones basales como las expuestas anteriormente, más: repetir radiografía de tórax semanalmente, análisis de sangre basales y pruebas de función hepática incluyendo ${insertTooltipTag('TLCO')}).</li></ul>`,
 				],
 				'step-≥3': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Sintomas graves de reciente aparición, hipoxia de reciente aparición o que empeora, potencialmente mortal, dificultad para respirar, síndrome de dificultad respiratoria aguda (SDRA).<br/><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>Hospitalizar al paciente:</b><ul><li>Pruebas basales como las anteriores.</li><br/><li>TAC de alta resolución y revisión respiratoria ± broncoscopia y LBA pendientes de aparición.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/>Sintomas graves de reciente aparición, hipoxia de reciente aparición o que empeora, potencialmente mortal, dificultad para respirar, síndrome de dificultad respiratoria aguda (${insertTooltipTag('SDRA')})).<br/><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>Hospitalizar al paciente:</b><ul><li>Pruebas basales como las anteriores.</li><br/><li>${insertTooltipTag('TC')}) de alta resolución y revisión respiratoria ± broncoscopia y ${insertTooltipTag('LBA')}) pendientes de aparición.</li></ul>`,
 				],
-			},
+			}, 
 			manage: {
 				'step-1': [
-					'<ul><li>Considerar el retraso del tratamiento con observación clínica.</li><br/><li>Monitorizar los síntomas cada 2-3 días.</li><br/><li>Si los síntomas empeoran, tratar como grado 2 o 3-4.</li></ul>',
+					`<ul><li>Considerar el retraso del tratamiento con observación clínica.</li><br/><li>Monitorizar los síntomas cada 2-3 días.</li><br/><li>Si los síntomas empeoran, tratar como grado 2 o 3-4.</li></ul>`,
 				],
 				'step-2': [
-					'<ul><li>Suspender la ICI.</li><br/><li>Iniciar antibióticos si sospecha de infección (fiebre, PCR, recuento de neutrófilos)</li><br/><br/><li>Si no hay evidencia de infección o no hay mejoría con antibióticos tras 48 h, añadir prednisolona oral 1 mg/kg/día</li><br/><li>Considerar profilaxis de pneumocystis, dependiendo del contexto clínico</li><br/><li>Si no hay mejoría 48h de prednisolona oral, manejar según grado 3</li></ul>',
+					`<ul><li>Suspender la ${insertTooltipTag('ICI')}).</li><br/><li>Iniciar antibióticos si sospecha de infección (fiebre, ${insertTooltipTag('PCR')}), recuento de neutrófilos).</li><br/><br/><li>Si no hay evidencia de infección o no hay mejoría con antibióticos tras 48 h, añadir prednisolona oral 1 mg/kg/día.</li><br/><li>Considerar profilaxis de pneumocystis, dependiendo del contexto clínico.</li><br/><li>Si no hay mejoría 48h de prednisolona oral, manejar según grado 3.</li></ul>`,
 				],
 				'step-≥3': [
-					'<ul><li>Interrumpir la terapia ICI</li><br/><li>(Metil) prednisolona i.v. 1-2 mg/kg/día</li><br/><li>Cubrir con antibióticos empíricos</li><br/><li>Discutir escalada y ventilación (IV, A)   En caso de ausencia de mejoría o deteriodo después de 48 horas, adicionar tocilizumab 8 mg/kg o infliximab 5 mg/kg ± inmunoglobulina IV. Considerar micofenolato de mofetilo o ciclofosfamida basado en reportes individuales, continuar con CSs IV; destetar cuando clínicamente esté indicado</li></ul>',
+					`<ul><li>Interrumpir la terapia ${insertTooltipTag('ICI')})</li><br/><li>(Metil) prednisolona ${insertTooltipTag('IV')}). 1-2 mg/kg/día</li><br/><li>Cubrir con antibióticos empíricos</li><br/><li>Discutir escalada y ventilación.</li></ul><ul><li> En caso de ausencia de mejoría o deteriodo después de 48 horas, adicionar tocilizumab 8 mg/kg o infliximab 5 mg/kg ± ${insertTooltipTag('IgIV')}).</li></ul><ul><li>Considerar micofenolato de mofetilo o ciclofosfamida basado en reportes individuales, continuar con ${insertTooltipTag('CS')}) e ${insertTooltipTag('IV')}); destetar cuando clínicamente esté indicado</li></ul>`,
 				],
 			},
 		},
@@ -96,76 +140,76 @@ export const sickness = {
 		'Diarrea / Colitis': {
 			test: {
 				'step-1': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Diarrea leve (<4 deposiciones/día respecto al basal), calambres, urgencia fecal, dolor abdominal, sangre/moco ocasional, fiebre leve.</li><br/><li>Aumento leve del volumen de ostomía.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>CBC, CMP, lactoferrina fecal; descartar infección (C. difficile, NAAT bacterias/virus, parásitos).</li><br/><li>Considerar calprotectina fecal si persiste.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Diarrea leve (<4 deposiciones/día respecto al basal), calambres, urgencia fecal, dolor abdominal, sangre/moco ocasional, fiebre leve.</li><br/><li>Aumento leve del volumen de ostomía.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>${insertTooltipTag('CBC')}, ${insertTooltipTag('CMP')}, lactoferrina fecal; descartar infección (${insertTooltipTag('<i>C.difficile</i>')}, ${insertTooltipTag('NAAT')} bacterias/virus, parásitos).</li><br/><li>Considerar calprotectina fecal si persiste.</li></ul>`,
 				],
 				'step-2': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Diarrea moderada (4-6 deposiciones/día), síntomas de colitis, limitación de <a style='text-decoration:underline; color: #a69f9f'>AIVD</a>.</li></ul><ul><li>Aumento moderado del volumen de ostomía.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li><a style='text-decoration:underline; color: #a69f9f'>CBC,</a> <a style='text-decoration:underline; color: #a69f9f'>CMP</a>, <a style='text-decoration:underline; color: #a69f9f'>TSH</a>; heces (cultivo, C. difficile, <a style='text-decoration:underline; color: #a69f9f'>CMV</a>, <a style='text-decoration:underline; color: #a69f9f'>O&P</a>); lactoferrina y calprotectina fecal.</li></ul><ul><li>Tamizaje <a style='text-decoration:underline; color: #a69f9f'>VIH</a>, hepatitis, <a style='text-decoration:underline; color: #a69f9f'>TB</a> si se planea biológicos.</li></ul><ul><li><a style='text-decoration:underline; color: #a69f9f'>TC</a> abdomen/pelvis si dolor o sangrado; endoscopia/colonoscopia con biopsia si  persiste >5 días.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Diarrea moderada (4-6 deposiciones/día), síntomas de colitis, limitación de ${insertTooltipTag('AIVD')}.</li></ul><ul><li>Aumento moderado del volumen de ostomía.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>${insertTooltipTag('CBC')} ${insertTooltipTag('CMP')}, ${insertTooltipTag('TSH')}; heces (cultivo, C. difficile, ${insertTooltipTag('CMV')}, ${insertTooltipTag('O&P')}); lactoferrina y calprotectina fecal.</li></ul><ul><li>Tamizaje ${insertTooltipTag('VIH')}, hepatitis, ${insertTooltipTag('TB')} si se planea biológicos.</li></ul><ul><li>${insertTooltipTag('TB')} abdomen/pelvis si dolor o sangrado; endoscopia/colonoscopia con biopsia si  persiste >5 días.</li></ul>`,
 				],
 				'step-≥3': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><b>Grado 3:</b><ul><li>Diarrea grave (≥7 deposiciones/día), incontinencia, hospitalización, limitación <a style='text-decoration:underline; color: #a69f9f'>AVD</a>.</li></ul><ul><li>Elevación marcada del volumen de ostomía.</li></ul><b>Grado 4:</b><ul><li>Consecuencias potencialmente mortales, intervención urgente.</li></ul><ul><li>Persistencia de síntomas graves pese a inmunosupresión.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>En ambos casos: </b><ul><li>En función de la disponibilidad institucional, considerar lactoferrina/calprotectina fecal.</li></ul>",
-					'<ul><li>Considerar <a  >TC</a> abdominal/pélvica con contraste.</li></ul><ul><li>Consulta con gastroenterología recomendada.</li></ul><ul><li>Repetir estudios infecciosos.</li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TC</a> abdomen si sospecha perforación o megacolon tóxico; colonoscopia con biopsia para ulceraciones.</li></ul><ul><li>Tamizaje <a style="text-decoration:underline; color: #a69f9f">VIH</a>, hepatitis, <a style="text-decoration:underline; color: #a69f9f">TB</a> si se planea biológicos.</li></ul><ul><li><a style="text-decoration:underline; color: #a69f9f">TC</a> abdomen/pelvis si dolor o sangrado; endoscopia/colonoscopia con biopsia si persiste >5 días.</li></ul>',
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><b>Grado 3:</b><ul><li>Diarrea grave (≥7 deposiciones/día), incontinencia, hospitalización, limitación ${insertTooltipTag('AIVD')}.</li></ul><ul><li>Elevación marcada del volumen de ostomía.</li></ul><b>Grado 4:</b><ul><li>Consecuencias potencialmente mortales, intervención urgente.</li></ul><ul><li>Persistencia de síntomas graves pese a inmunosupresión.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><b>En ambos casos: </b><ul><li>En función de la disponibilidad institucional, considerar lactoferrina/calprotectina fecal.</li></ul>`,
+					`<ul><li>Considerar ${insertTooltipTag('TC')} abdominal/pélvica con contraste.</li></ul><ul><li>Consulta con gastroenterología recomendada.</li></ul><ul><li>Repetir estudios infecciosos.</li></ul><ul><li>${insertTooltipTag('TC')} abdomen si sospecha perforación o megacolon tóxico; colonoscopia con biopsia para ulceraciones.</li></ul><ul><li>Tamizaje ${insertTooltipTag('VIH')}, hepatitis, ${insertTooltipTag('TB')} si se planea biológicos.</li></ul><ul><li>${insertTooltipTag('TC')} abdomen/pelvis si dolor o sangrado; endoscopia/colonoscopia con biopsia si persiste >5 días.</li></ul>`,
 				],
 			},
 			manage: {
 				'step-1': [
-					'<ul><li>Continuar inmunoterapia o suspender temporalmente según evolución.</li><br/><li>Hidratación oral, dieta baja en fibra y libre de lactosa (<a style="text-decoration:underline; color: #a69f9f">BRAT</a>).</li><br/><li>Loperamida o difenoxilato/atropina si no hay colitis confirmada.</li><br/><li>Seguimiento estrecho (cada 3 días).</li><br/><li>Consultar gastroenterología si síntomas prolongados.</li></ul>',
+					`<ul><li>Continuar inmunoterapia o suspender temporalmente según evolución.</li><br/><li>Hidratación oral, dieta baja en fibra y libre de lactosa (${insertTooltipTag('BRAT')}).</li><br/><li>Loperamida o difenoxilato/atropina si no hay colitis confirmada.</li><br/><li>Seguimiento estrecho (cada 3 días).</li><br/><li>Consultar gastroenterología si síntomas prolongados.</li></ul>`,
 				],
 				'step-2': [
-					'<ul><li>Suspender inmunoterapia hasta mejoría   grado ≤1.</li><br><li>Corticoides: prednisona 1 mg/kg/día (destete 4-6 semanas).</li><br/><li>Si refractario en 72 h o hallazgos endoscópicos graves: infliximab o vedolizumab.</li><br/><li>Seguimiento endoscópico y calprotectina para guiar duración del tratamiento.</li></ul>',
+					`<ul><li>Suspender inmunoterapia hasta mejoría   grado ≤1.</li><br><li>Corticoides: prednisona 1 mg/kg/día (destete 4-6 semanas).</li><br/><li>Si refractario en 72 h o hallazgos endoscópicos graves: infliximab o vedolizumab.</li><br/><li>Seguimiento endoscópico y calprotectina para guiar duración del tratamiento.</li></ul>`,
 				],
 				'step-≥3': [
-					'<b>Grado 3: </b><ul><li>Suspender inmunoterapia.</li></ul><ul><li>Corticoides: prednisona o metilprednisolona IV 1-2 mg/kg/día.</li></ul><ul><li>Considerar infliximab o vedolizumab temprano si no hay respuesta en 3 días.</li></ul><ul><li>Hospitalización para hidratación y monitoreo electrolítico.</li></ul><b>Grado 4: </b><ul><li>Suspensión permanente de inmunoterapia.</li></ul><ul><li>Hospitalización obligatoria.</li></ul><ul><li>Metilprednisolona IV 1-2 mg/kg/día.</li></ul>',
-					'<ul><li>Infliximab (semanas 0, 2, 6) o vedolizumab si falla respuesta a corticoides.</li></ul><ul><li>Considerar otros biológicos (ustekinumab, tofacitinib) o trasplante fecal en casos refractarios.</li></ul>',
+					`<b>Grado 3: </b><ul><li>Suspender inmunoterapia.</li></ul><ul><li>Corticoides: prednisona o metilprednisolona ${insertTooltipTag('IV')} 1-2 mg/kg/día.</li></ul><ul><li>Considerar infliximab o vedolizumab temprano si no hay respuesta en 3 días.</li></ul><ul><li>Hospitalización para hidratación y monitoreo electrolítico.</li></ul><b>Grado 4: </b><ul><li>Suspensión permanente de inmunoterapia.</li></ul><ul><li>Hospitalización obligatoria.</li></ul><ul><li>Metilprednisolona ${insertTooltipTag('IV')} 1-2 mg/kg/día.</li></ul>`,
+					`<ul>Metilprednisolona ${insertTooltipTag('IV')} 1-2 mg/kg/día.<li></li></ul><ul><li>Infliximab (semanas 0, 2, 6) o vedolizumab si falla respuesta a corticoides.</li></ul><ul><li>Considerar otros biológicos (ustekinumab, tofacitinib) o trasplante fecal en casos refractarios.</li></ul>`,
 				],
 			},
 		},
-		Pancreatitis: {
+		'Pancreatitis': {
 			test: {
 				'step-1': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Dolor epigástrico leve, náuseas y vómitos.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li><a style='text-decoration:underline; color: #a69f9f'>TC</a> abdominal con contraste; considerar <a style='text-decoration:underline; color: #a69f9f'>CPRM</a> si sospecha clínica sin evidencia en <a style='text-decoration:underline; color: #a69f9f'>TC</a>.</li><br/><li>Laboratorio: amilasa, lipasa, <a style='text-decoration:underline; color: #a69f9f'>CBC</a>, <a style='text-decoration:underline; color: #a69f9f'>CMP</a>, triglicéridos.</li><br/><li>Evaluar otras causas (alcohol, biliar)</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Dolor epigástrico leve, náuseas y vómitos.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TC')} abdominal con contraste; considerar ${insertTooltipTag('CPRM')} si sospecha clínica sin evidencia en ${insertTooltipTag('TC')}.</li><br/><li>Laboratorio: amilasa, lipasa, ${insertTooltipTag('CBC')}, ${insertTooltipTag('CMO')}, triglicéridos.</li><br/><li>Evaluar otras causas (alcohol, biliar)</li></ul>`,
 				],
 				'step-2': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Elevación enzimática (amilasa/lipasa) asintomática o hallazgos radiológicos compatibles.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>TC abdominal con contraste; considerar <a style='text-decoration:underline; color: #a69f9f'>CPRM</a> si sospecha clínica sin evidencia en <a style='text-decoration:underline; color: #a69f9f'>TC</a>.</li><br/><li>Laboratorio: amilasa, lipasa, <a style='text-decoration:underline; color: #a69f9f'>CBC</a>, <a style='text-decoration:underline; color: #a69f9f'>CMP</a>, triglicéridos.</li><br/><li>Evaluar otras causas (alcohol, biliar)</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Elevación enzimática (amilasa/lipasa) asintomática o hallazgos radiológicos compatibles.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TC')} abdominal con contraste; considerar ${insertTooltipTag('CPRM')} si sospecha clínica sin evidencia en ${insertTooltipTag('TC')}.</li><br/><li>Laboratorio: amilasa, lipasa, ${insertTooltipTag('CBC')}, ${insertTooltipTag('CMP')}, triglicéridos.</li><br/><li>Evaluar otras causas (alcohol, biliar)</li></ul>`,
 				],
 				'step-≥3': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Dolor</li></ul><ul><li>Vómito</li></ul><ul><li>Hallazgos de pancreatitis (elevación de enzimas o hallazgos tomográficos) que ponen en riesgo la vida o condicionan inestabilidad hemodinámica o requieren una intervención urgente</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li><a style='text-decoration:underline; color: #a69f9f'>TC</a> abdominal con contraste; considerar <a style='text-decoration:underline; color: #a69f9f'>CPRM</a> si sospecha clínica sin evidencia en <a style='text-decoration:underline; color: #a69f9f'>TC</a>.</li></ul><ul><li>Laboratorio: amilasa, lipasa, <a style='text-decoration:underline; color: #a69f9f'>CBC</a>, <a style='text-decoration:underline; color: #a69f9f'>CMP</a>, triglicéridos.</li></ul><ul><li>Evaluar otras causas (alcohol, biliar).</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Dolor</li></ul><ul><li>Vómito</li></ul><ul><li>Hallazgos de pancreatitis (elevación de enzimas o hallazgos tomográficos) que ponen en riesgo la vida o condicionan inestabilidad hemodinámica o requieren una intervención urgente</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>${insertTooltipTag('TC')} abdominal con contraste; considerar ${insertTooltipTag('CPRM')} si sospecha clínica sin evidencia en ${insertTooltipTag('TC')}.</li></ul><ul><li>Laboratorio: amilasa, lipasa, ${insertTooltipTag('CBC')}, ${insertTooltipTag('CMP')}, triglicéridos.</li></ul><ul><li>Evaluar otras causas (alcohol, biliar).</li></ul>`,
 				],
 			},
 			manage: {
 				'step-1': [
-					'<ul><li>Considerar mantener inmunoterapia si asintomático.</li><br/><li>Hidratación IV y control del dolor si hay síntomas.</li><br/><li>Derivación a gastroenterología.</li></ul><ul><li>Monitoreo cercano ante posible progresión.</li></ul>',
+					`<ul><li>Considerar mantener inmunoterapia si asintomático.</li><br/><li>Hidratación ${insertTooltipTag('IV')} y control del dolor si hay síntomas.</li><br/><li>Derivación a gastroenterología.</li></ul><ul><li>Monitoreo cercano ante posible progresión.</li></ul>`,
 				],
 				'step-2': [
-					'<ul><li>Considerar mantener inmunoterapia si asintomático.</li><br/><li>Hidratación IV y control del dolor si hay síntomas.</li><br/><li>Derivación a gastroenterología.</li><br/><li>Monitoreo cercano ante posible progresión.</li></ul>',
+					`<ul><li>Considerar mantener inmunoterapia si asintomático.</li><br/><li>Hidratación ${insertTooltipTag('IV')} y control del dolor si hay síntomas.</li><br/><li>Derivación a gastroenterología.</li><br/><li>Monitoreo cercano ante posible progresión.</li></ul>`,
 				],
 				'step-≥3': [
-					'<ul><li><b>Grado 3: </b></li>Suspender inmunoterapia temporalmente.<br/><br/><li>Hidratación IV y control del dolor.- Considerar prednisona/metilprednisolona 0,5-1 mg/kg/día si no hay mejoría tras soporte.</li><br/><li>Derivación a gastroenterología.</li><br/><b>Grado 4:</b><li>Suspender inmunoterapia permanentemente.</li></ul><ul><li>Hidratación IV intensiva y control del dolor.</li></ul><ul><li>Corticoides IV (metilprednisolona 1-2 mg/kg/día) si no hay mejoría con soporte.</li></ul>',
-					'<ul><li>Continuar tratamiento hasta mejoría < G1, luego destete de esteroides en 4-6 semanas.</li></ul><ul><li>Derivación a gastroenterología y monitoreo estrecho.</li></ul>',
+					`<ul><li><b>Grado 3: </b></li>Suspender inmunoterapia temporalmente.<br/><br/><li>Hidratación ${insertTooltipTag('IV')} y control del dolor.</li></ul><ul><li>Considerar prednisona/metilprednisolona 0,5-1 mg/kg/día si no hay mejoría tras soporte.</li><br/><li>Derivación a gastroenterología.</li><br/><b>Grado 4:</b><li>Suspender inmunoterapia permanentemente.</li></ul><ul><li>Hidratación ${insertTooltipTag('IV')} intensiva y control del dolor.</li></ul><ul><li>Corticoides ${insertTooltipTag('IV')} (metilprednisolona 1-2 mg/kg/día) si no hay mejoría con soporte.</li></ul>`,
+					`<ul><li>Continuar tratamiento hasta mejoría < ${insertTooltipTag('G1')}, luego destete de esteroides en 4-6 semanas.</li></ul><ul><li>Derivación a gastroenterología y monitoreo estrecho.</li></ul>`,
 				],
 			},
 		},
-		Hepatitis: {
+		'Hepatitis': {
 			test: {
 				'step-1': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Asintomático (<a style='text-decoration:underline; color: #a69f9f'>AST</a> o <a style='text-decoration:underline; color: #a69f9f'>ALT</a><a style='text-decoration:underline; color: #a69f9f'>LSN</a> hasta 3x <a style='text-decoration:underline; color: #a69f9f'>LSN</a> y/o bilirrubina total < <a style='text-decoration:underline; color: #a69f9f'>LSN</a> hasta 1,5x <a style='text-decoration:underline; color: #a69f9f'>LSN</a>).</li></ul><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>Monitorizar <a style='text-decoration:underline; color: #a69f9f'>AST</a>, <a style='text-decoration:underline; color: #a69f9f'>ALT</a> y bilirrubina antes de cada infusión; considerar monitoreo semanal si hay elevaciones grado 1.</li><br/><li>Revisar medicamentos y descartar metástasis hepáticas.</li><br/><li>Considerar biopsia hepática si refractario a esteroides o diagnóstico incierto.</li><br/><li>Paneles adicionales si sospecha autoinmune: <a style='text-decoration:underline; color: #a69f9f'>ANA</a>, <a style='text-decoration:underline; color: #a69f9f'>ASMA</a>, <a style='text-decoration:underline; color: #a69f9f'>ANCA</a>; medir <a style='text-decoration:underline; color: #a69f9f'>GGT</a> si <a style='text-decoration:underline; color: #a69f9f'>ALP</a> elevado; <a style='text-decoration:underline; color: #a69f9f'>CK</a> si elevación aislada de transaminasas.</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Asintomático (${insertTooltipTag('AST')} o ${insertTooltipTag('ALT')} ${insertTooltipTag('LSN')} hasta 3x ${insertTooltipTag('LSN')} y/o bilirrubina total < ${insertTooltipTag('LSN')} hasta 1,5x ${insertTooltipTag('LSN')}).</li></ul><br/><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>Monitorizar ${insertTooltipTag('AST')}, ${insertTooltipTag('ALT')} y bilirrubina antes de cada infusión; considerar monitoreo semanal si hay elevaciones grado 1.</li><br/><li>Revisar medicamentos y descartar metástasis hepáticas.</li><br/><li>Considerar biopsia hepática si refractario a esteroides o diagnóstico incierto.</li><br/><li>Paneles adicionales si sospecha autoinmune: ${insertTooltipTag('ANA')}, ${insertTooltipTag('ASMA')}, ${insertTooltipTag('ANCA')}; medir ${insertTooltipTag('GGT')} si ${insertTooltipTag('ALP')} elevado; ${insertTooltipTag('CK')} si elevación aislada de transaminasas.</li></ul>`,
 				],
 				'step-2': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Asintomático (<a style='text-decoration:underline; color: #a69f9f'>AST</a> o <a style='text-decoration:underline; color: #a69f9f'>ALT</a> >3x - ≤5x <a style='text-decoration:underline; color: #a69f9f'>LSN</a> y/o bilirrubina >1,5x - ≤3x <a style='text-decoration:underline; color: #a69f9f'>LSN</a>).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>Igual que grado 1, más pruebas adicionales (hepatitis viral, hierro sérico, imágenes si sospecha progresión).</li><br/><li>Monitoreo frecuente (cada 3 días).</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><br/><ul><li>Asintomático (${insertTooltipTag('AST')} o ${insertTooltipTag('ALT')}3x - ≤5x ${insertTooltipTag('LSN')} y/o bilirrubina >1,5x - ≤3x ${insertTooltipTag('LSN')}).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>Igual que grado 1, más pruebas adicionales (hepatitis viral, hierro sérico, imágenes si sospecha progresión).</li><br/><li>Monitoreo frecuente (cada 3 días).</li></ul>`,
 				],
 				'step-≥3': [
-					"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li> <a style='text-decoration:underline; color: #a69f9f'>AST</a> o <a style='text-decoration:underline; color: #a69f9f'>ALT</a> 5-20x <a style='text-decoration:underline; color: #a69f9f'>LSN</a> y/o bilirrubina 3-10x <a style='text-decoration:underline; color: #a69f9f'>LSN</a>.</li></ul><ul><li>Disfunción hepática sintomática, fibrosis confirmada, cirrosis compensada, reactivación de hepatitis crónica.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Igual que grado 1, más pruebas adicionales (hepatitis viral, hierro sérico, imágenes si sospecha progresión).</li></ul><ul><li>Monitoreo frecuente (cada 3 días).</li></ul>",
+					`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li> ${insertTooltipTag('AST')} o ${insertTooltipTag('ALT')} 5-20x ${insertTooltipTag('LSN')} y/o bilirrubina 3-10x ${insertTooltipTag('LSN')}.</li></ul><ul><li>Disfunción hepática sintomática, fibrosis confirmada, cirrosis compensada, reactivación de hepatitis crónica.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Igual que grado 1, más pruebas adicionales (hepatitis viral, hierro sérico, imágenes si sospecha progresión).</li></ul><ul><li>Monitoreo frecuente (cada 3 días).</li></ul>`,
 				],
 			},
 			manage: {
 				'step-1': [
-					'<ul><li>Continuar inmunoterapia con monitoreo cercano.</li><br/><li>Monitoreo de laboratorio 1-2 veces por semana.</li><br/><li>Manejo sintomático con medidas de soporte.</li></ul>',
+					`<ul><li>Continuar inmunoterapia con monitoreo cercano.</li><br/><li>Monitoreo de laboratorio 1-2 veces por semana.</li><br/><li>Manejo sintomático con medidas de soporte.</li></ul>`,
 				],
 				'step-2': [
-					'<ul><li>Suspender inmunoterapia temporalmente. Suspender fármacos hepatotóxicos innecesarios.</li><br/><li>Iniciar prednisona 0,5-1 mg/kg/día si no hay mejoría tras 3-5 días.</li><br/><li>Considerar micofenolato de mofetilo si no hay respuesta a esteroides.</li><br/><li>Consulta por hepatología en grado ≥2.</li><br/><li>Reiniciar <a style="text-decoration:underline; color: #a69f9f">ICI</a> si se recupera a grado ≤1 y prednisona ≤10 mg/día.</li></ul>',
+					`<ul><li>Suspender inmunoterapia temporalmente. Suspender fármacos hepatotóxicos innecesarios.</li><br/><li>Iniciar prednisona 0,5-1 mg/kg/día si no hay mejoría tras 3-5 días.</li><br/><li>Considerar micofenolato de mofetilo si no hay respuesta a esteroides.</li><br/><li>Consulta por hepatología en grado ≥2.</li><br/><li>Reiniciar ${insertTooltipTag('ICI')} si se recupera a grado ≤1 y prednisona ≤10 mg/día.</li></ul>`,
 				],
 				'step-≥3': [
-					'<ul><b>Grado 3: </b></ul><ul><li>Suspender inmunoterapia definitivamente si el paciente presenta síntomas.</li><br/><li>Iniciar metilprednisolona 1-2 mg/kg/día.</li><br/><li>Si el paciente es refractario, considerar micofenolato, azatioprina.</li><br/><li>Monitoreo diario o cada 2 día s; hospitalización si <a style="text-decoration:underline; color: #a69f9f">AST</a>/<a style="text-decoration:underline; color: #a69f9f">ALT</a> >8x <a style="text-decoration:underline; color: #a69f9f">ULN</a> y/o bilirrubina >3x <a style="text-decoration:underline; color: #a69f9f">ULN</a>.</li></ul><ul><li>Disminución progresiva de esteroides tras 4-6 semanas cuando se logre grado ≤1.</li></ul>',
-					'<ul><b>Grado 4: </b><br/>Seguir recomendaciones de grado 3, más lo siguiente:</ul><ul><li>Suspender inmunoterapia permanentemente.</li><br/><li>Administrar metilprednisolona 2 mg/kg/díao equivalente.</li></ul><ul><li>Continuar monitoreo intensivo y considerar transferencia a centro especializado.</li></ul><ul><li>Nota: no usar infliximab, debido al riesgo de hepatotoxicidad.</li></ul>',
+					`<ul><b>Grado 3: </b></ul><ul><li>Suspender inmunoterapia definitivamente si el paciente presenta síntomas.</li><br/><li>Iniciar metilprednisolona 1-2 mg/kg/día.</li><br/><li>Si el paciente es refractario, considerar micofenolato, azatioprina.</li><br/><li>Monitoreo diario o cada 2 día s; hospitalización si ${insertTooltipTag('AST')}/${insertTooltipTag('ALT')} >8x ${insertTooltipTag('ULN')} y/o bilirrubina >3x ${insertTooltipTag('ULN')}.</li></ul><ul><li>Disminución progresiva de esteroides tras 4-6 semanas cuando se logre grado ≤1.</li></ul>`,
+					`<ul><b>Grado 4: </b><br/>Seguir recomendaciones de grado 3, más lo siguiente:</ul><ul><li>Suspender inmunoterapia permanentemente.</li><br/><li>Administrar metilprednisolona 2 mg/kg/díao equivalente.</li></ul><ul><li>Continuar monitoreo intensivo y considerar transferencia a centro especializado.</li></ul><ul><li>Nota: no usar infliximab, debido al riesgo de hepatotoxicidad.</li></ul>`,
 				],
 			},
 		},
@@ -185,29 +229,29 @@ export const sickness = {
 			{
 				test: {
 					'step-1': [
-						"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Incremento de creatinina >0,3 mg/dl en 48 h o 1,5–1,9 veces basal (KDIGO 1).</li><br/><li>Según CTCAE: sCr >LSN - 1,5x LSN.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Análisis de orina (tira reactiva, proteinuria, UPCR).</li><br/><li>Cuantificación de proteinuria (24 h o UPCR si proteinuria presente).</li></ul><ul><li>Creatinina en orina, cultivo urinario si síntomas de ITU.</li></ul><ul><li>Ecografía renal ± Doppler si sospecha obstrucción/trombosis.</li></ul>",
-						'<ul><li>Microscopía si hematuria(descartar glomerulonefritis).</li></ul><ul><li>Revisión de hidratación y medicamentos (incluidos nefrotóxicos).</li></ul><ul><li>Informar al paciente sobre oliguria.</li></ul><ul><li>Considerar biopsia renal si diagnóstico incierto.</li></ul><ul><li>Monitoreo de creatinina antes de cada dosis de ICI.</li></ul>',
+						`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Incremento de creatinina >0,3 mg/dl en 48 h o 1,5–1,9 veces basal (${insertTooltipTag('KDIGO')} 1).</li><br/><li>Según ${insertTooltipTag('CTCAE')}: ${insertTooltipTag('ScR')} >${insertTooltipTag('LSN')} - 1,5x ${insertTooltipTag('LSN')}.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Análisis de orina (tira reactiva, proteinuria, ${insertTooltipTag('UPCR')}).</li><br/><li>Cuantificación de proteinuria (24 h o ${insertTooltipTag('UPCR')} si proteinuria presente).</li></ul><ul><li>Creatinina en orina, cultivo urinario si síntomas de ${insertTooltipTag('ITU')}.</li></ul><ul><li>Ecografía renal ± Doppler si sospecha obstrucción/trombosis.</li></ul>`,
+						`<ul><li>Microscopía si hematuria(descartar glomerulonefritis).</li></ul><ul><li>Revisión de hidratación y medicamentos (incluidos nefrotóxicos).</li></ul><ul><li>Informar al paciente sobre oliguria.</li></ul><ul><li>Considerar biopsia renal si diagnóstico incierto.</li></ul><ul><li>Monitoreo de creatinina antes de cada dosis de ${insertTooltipTag('ICI')}.</li></ul>`,
 					],
 					'step-2': [
-						"<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Creatinina 2–3 veces basal (KDIGO 2).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Análisis de orina (tira reactiva, proteinuria, UPCR).</li></ul><ul><li>Cuantificación de proteinuria (24 h o UPCR si proteinuria presente).</li></ul><ul><li>Creatinina en orina, cultivo urinario si síntomas de ITU.</li></ul><ul><li>Ecografía renal ± Doppler si sospecha obstrucción/trombosis.</li></ul><ul><li>Microscopía si hematuria (descartar glomerulonefritis).</li></ul>",
-						'<ul><li>Revisión  de hidratación y medicamentos (incluidos nefrotóxicos).</li></ul><ul><li>Informar al paciente sobre oliguria.</li></ul><ul><li>Considerar biopsia renal si diagnóstico incierto.</li></ul><ul><li>Monitoreo de creatinina antes de cada dosis de ICI.</li></ul><ul><li>Reevaluación en 48–72 h.</li></ul><ul><li>Considerar biopsia renal si no mejora o proteinuria significativa.</li></ul>',
+						`<span style='color: #be2bbb'><b>Síntomas:</b></span><ul><li>Creatinina 2–3 veces basal (${insertTooltipTag('KDIGO')} 2).</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><ul><li>Análisis de orina (tira reactiva, proteinuria, ${insertTooltipTag('UPCR')}).</li></ul><ul><li>Cuantificación de proteinuria (24 h o ${insertTooltipTag('UPCR')} si proteinuria presente).</li></ul><ul><li>Creatinina en orina, cultivo urinario si síntomas de ${insertTooltipTag('ITU')}.</li></ul><ul><li>Ecografía renal ± Doppler si sospecha obstrucción/trombosis.</li></ul><ul><li>Microscopía si hematuria (descartar glomerulonefritis).</li></ul>`,
+						`<ul><li>Revisión  de hidratación y medicamentos (incluidos nefrotóxicos).</li></ul><ul><li>Informar al paciente sobre oliguria.</li></ul><ul><li>Considerar biopsia renal si diagnóstico incierto.</li></ul><ul><li>Monitoreo de creatinina antes de cada dosis de ${insertTooltipTag('ICI')}.</li></ul><ul><li>Reevaluación en 48–72 h.</li></ul><ul><li>Considerar biopsia renal si no mejora o proteinuria significativa.</li></ul>`,
 					],
 					'step-≥3': [
-						"<span style='color: #be2bbb'><b>Síntomas grado 3:</b></span><br/><ul><li>Elevación de creatinina basal ≥ 3,0 veces la creatinina basa; 4,0 mg/dl o necesidad de terapia de reemplazo renal, cuando está indicada dialisis.</li></ul><span style='color: #be2bbb'><b>Síntomas grado 4:</b></span><ul><li>Consecuencias potencialmente mortales; diálisis indicada; creatinina >6x LSN.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>Análisis de orina (tira reactiva, proteinuria, UPCR).</li></ul><ul><li>Cuantificación de proteinuria (24 h o UPCR si proteinuria presente).</li></ul><ul><li>Creatinina en orina, cultivo urinario si síntomas de ITU.</li></ul>",
-						'<ul><li>Ecografía renal ± Doppler si sospecha obstrucción/trombosis.</li></ul><ul><li>Microscopía si hematuria (descartar glomerulonefritis).</li></ul><ul><li>Revisión de hidratación y medicamentos (incluidos nefrotóxicos).</li></ul><ul><li>Informar al paciente sobre oliguria.</li></ul><ul><li>Considerar biopsia renal si diagnóstico incierto.</li></ul><ul><li>Monitoreo de creatinina antes de cada dosis de ICI.</li></ul><ul><li>Reevaluación en 48–72 h.</li></ul>',
-						'<ul><li>Considerar biopsia renal si no mejora o proteinuria significativa.</li></ul><ul><li>Discusión temprana con nefrología.</li></ul><ul><li>Considerar biopsia renal.</li></ul>',
+						`<span style='color: #be2bbb'><b>Síntomas grado 3:</b></span><br/><ul><li>Elevación de creatinina basal ≥ 3,0 veces la creatinina basa; 4,0 mg/dl o necesidad de terapia de reemplazo renal, cuando está indicada dialisis.</li></ul><span style='color: #be2bbb'><b>Síntomas grado 4:</b></span><ul><li>Consecuencias potencialmente mortales; diálisis indicada; creatinina >6x ${insertTooltipTag('LSN')}.</li></ul><span style='color: #be2bbb'><b>Evaluación y estudios:</b></span><br/><ul><li>Análisis de orina (tira reactiva, proteinuria, ${insertTooltipTag('UPCR')}).</li></ul><ul><li>Cuantificación de proteinuria (24 h o ${insertTooltipTag('UPCR')} si proteinuria presente).</li></ul><ul><li>Creatinina en orina, cultivo urinario si síntomas de ${insertTooltipTag('ITU')}.</li></ul>`,
+						`<ul><li>Ecografía renal ± Doppler si sospecha obstrucción/trombosis.</li></ul><ul><li>Microscopía si hematuria (descartar glomerulonefritis).</li></ul><ul><li>Revisión de hidratación y medicamentos (incluidos nefrotóxicos).</li></ul><ul><li>Informar al paciente sobre oliguria.</li></ul><ul><li>Considerar biopsia renal si diagnóstico incierto.</li></ul><ul><li>Monitoreo de creatinina antes de cada dosis de ${insertTooltipTag('ICI')}.</li></ul><ul><li>Reevaluación en 48–72 h.</li></ul>`,
+						`<ul><li>Considerar biopsia renal si no mejora o proteinuria significativa.</li></ul><ul><li>Discusión temprana con nefrología.</li></ul><ul><li>Considerar biopsia renal.</li></ul>`,
 					],
 				},
 				manage: {
 					'step-1': [
-						'<ul><li>Continuar inmunoterapia si estable.</li><br/><li>Suspender fármacos nefrotóxicos.</li><br/><li>Repetir creatinina semanalmente.</li><br/><li>Si empeora: descartar otras causas, interrumpir ICI según gravedad.</li><br/><li>Iniciar prednisona/metilprednisolona 1 mg/kg si sospecha EARI.</li></ul>',
+						`<ul><li>Continuar inmunoterapia si estable.</li><br/><li>Suspender fármacos nefrotóxicos.</li><br/><li>Repetir creatinina semanalmente.</li><br/><li>Si empeora: descartar otras causas, interrumpir ${insertTooltipTag('ICI')} según gravedad.</li><br/><li>Iniciar prednisona/metilprednisolona 1 mg/kg si sospecha ${insertTooltipTag('EARI')}.</li></ul>`,
 					],
 					'step-2': [
-						'<ul><li>Suspender inmunoterapia temporalmente. Hidratación y monitoreo de creatinina y K+ cada 48 h.</li><br><li>Si EARI confirmado: iniciar corticosteroides (prednisona 0,5–1 mg/kg).</li><br/><li>Si no mejora en 1 semana: aumentar a 1–2 mg/kg y suspender ICI permanentemente.</li><br/><li>Reducir corticosteroides gradualmente ≥4 semanas.</li></ul><ul><li>Reiniciar ICI solo si prednisona ≤10 mg/día y función renal recuperada.</li></ul>',
+						`<ul><li>Suspender inmunoterapia temporalmente. Hidratación y monitoreo de creatinina y ${insertTooltipTag('K')} + cada 48 h.</li><br><li>Si ${insertTooltipTag('EARI')} confirmado: iniciar corticosteroides (prednisona 0,5–1 mg/kg).</li><br/><li>Si no mejora en 1 semana: aumentar a 1–2 mg/kg y suspender ${insertTooltipTag('ICI')} permanentemente.</li><br/><li>Reducir corticosteroides gradualmente ≥4 semanas.</li></ul><ul><li>Reiniciar ${insertTooltipTag('ICI')} solo si prednisona ≤10 mg/día y función renal recuperada.</li></ul>`,
 					],
 					'step-≥3': [
-						'<ul><li>Suspender inmunoterapia.</li></ul><ul><li>Consulta con nefrología</li></ul><ul><li>Hospitalización para monitoreo y balance de líquidos.</li></ul><ul><li>Repetir creatinina cada 24 h.</li></ul><ul><li>Metilprednisolona IV 1 mg/kg o pulsos de 250–500 mg por 3 días.</li></ul><ul><li>Biopsia renal si no hay mejoría en 5–7 días y/o nueva proteinuria.</li></ul>',
-						'<ul><li>Según los resultados de la biopsia renal, considerar uno de los siguientes si la lesión renal persiste en AKI ≥2 después de 4–6 semanas con corticosteroides o si la creatinina aumenta al reducir los esteroides (o tras su suspensión) (orden alfabético): azatioprina, infliximab, micofenolato mofetil o rituximab.</li></ul>',
+						`<ul><li>Suspender inmunoterapia.</li></ul><ul><li>Consulta con nefrología</li></ul><ul><li>Hospitalización para monitoreo y balance de líquidos.</li></ul><ul><li>Repetir creatinina cada 24 h.</li></ul><ul><li>Metilprednisolona ${insertTooltipTag('IV')} 1 mg/kg o pulsos de 250–500 mg por 3 días.</li></ul><ul><li>Biopsia renal si no hay mejoría en 5–7 días y/o nueva proteinuria.</li></ul>`,
+						`<ul><li>Según los resultados de la biopsia renal, considerar uno de los siguientes si la lesión renal persiste en ${insertTooltipTag('AKI')} ≥2 después de 4–6 semanas con corticosteroides o si la creatinina aumenta al reducir los esteroides (o tras su suspensión) (orden alfabético): azatioprina, infliximab, micofenolato mofetil o rituximab.</li></ul>`,
 					],
 				},
 			},

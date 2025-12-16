@@ -34,7 +34,7 @@ export default function Calculadora({ hideTitle }) {
 	return (
 		<div className={`${!hideTitle ? 'min-h-screen' : ''} bg-[#f3eeee] flex flex-col items-center p-4`}>
 			<div className="w-full max-w-xs bg-white overflow-hidden">
-				<Header />
+				{!hideTitle && <Header />}
 				<div
 					className={` ${
 						!hideTitle ? 'max-w-[80%] mt-[90px]' : 'max-w-full w-full'
