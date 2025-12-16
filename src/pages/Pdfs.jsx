@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import Footer from '../components/common/Footer/Footer'
 import Header from '../components/common/Header/Header'
 
+
 const pdfs = {
 	nccn: {
 		pulmonar:
@@ -68,7 +69,7 @@ const Pdfs = () => {
 			<div className="max-w-[90%] mt-[100px] mx-auto relative h-[calc(100dvh_-246px)] w-full">
 				<iframe
 					className="h-full w-full"
-					src={pdfs[type][enfermedad]}
+					src={`${pdfs[type][enfermedad]}#view=FitV&zoom=page-fit`}
 					frameborder="0"></iframe>
 			</div>
 			<Link to={`/${type}/resources-type`}>
