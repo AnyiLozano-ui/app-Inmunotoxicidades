@@ -24,7 +24,7 @@ const ResourcesType = () => {
 				<div className="mt-[20px] flex justify-center gap-[20px]">
 					<Link to={`/${type}/pdfs/pulmonar`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/pulmonar.png"
@@ -37,7 +37,7 @@ const ResourcesType = () => {
 					</Link>
 					<Link to={`/${type}/pdfs/gastro`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/gastro.png"
@@ -51,7 +51,7 @@ const ResourcesType = () => {
 					</Link>
 					<Link to={`/${type}/pdfs/renal`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img src="/Images/renal.png" className="w-[71px]" />
 							<div className="w-[115%] text-[white] uppercase font-[700] rounded-[10px] h-[35px] flex justify-center items-center text-[12px] absolute -bottom-[20px] bg-[#be2bbb]">
@@ -63,7 +63,7 @@ const ResourcesType = () => {
 				<div className="mt-[40px] flex justify-center gap-[20px]">
 					<Link to={`/${type}/pdfs/endocrino`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/endocrino.png"
@@ -76,7 +76,7 @@ const ResourcesType = () => {
 					</Link>
 					<Link to={`/${type}/pdfs/Neurológico`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/neurologico.png"
@@ -91,7 +91,7 @@ const ResourcesType = () => {
 				<div className="mt-[40px] flex justify-center gap-[20px]">
 					<Link to={`/${type}/pdfs/CardioVascular`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/cardio.png"
@@ -105,7 +105,7 @@ const ResourcesType = () => {
 					</Link>
 					<Link to={`/${type}/pdfs/Dermatológico`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/dermatologico.png"
@@ -118,7 +118,7 @@ const ResourcesType = () => {
 					</Link>
 					<Link to={`/${type}/pdfs/MusculoEsqueletico`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/musculo.png"
@@ -134,7 +134,7 @@ const ResourcesType = () => {
 				<div className="mt-[40px] flex justify-center gap-[20px] mb-[30px]">
 					<Link to={`/${type}/pdfs/Hematológico`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/hematologico.png"
@@ -147,7 +147,7 @@ const ResourcesType = () => {
 					</Link>
 					<Link to={`/${type}/pdfs/Ocular`}>
 						<div
-							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[102px]"
+							className="border-solid border-[2px] flex justify-center rounded-[20px] items-center relative h-[105px] w-[90px]"
 							style={{ borderColor: '#be2bbb' }}>
 							<img
 								src="/Images/ocular.png"
